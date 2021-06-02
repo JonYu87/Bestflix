@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Root from './components/root';
-import * as SessionApi from './util/session_api_util'
+import * as APIUtil from './util/session_api_util'
 
 document.addEventListener("DOMContentLoaded",() => {
   let store;
@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded",() => {
   }
   const root = document.getElementById('root')
   ReactDOM.render(<h1>Welcome to Bestflix!</h1>, root)
-  window.login = SessionApi.login
-  window.signup = SessionApi.signup
-  window.logout = SessionApi.logout
+  window.login = APIUtil.login
+  window.signup = APIUtil.signup
+  window.logout = APIUtil.logout
 });
 
