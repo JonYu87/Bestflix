@@ -11,11 +11,11 @@ class NavBar extends React.Component {
     <div>
       Placeholder for NavBar
       <br />
-      <Link to="/login">Login</Link>
+      <Link to="/login">Sign in</Link>
       <br />
-      <Link to="/signup">Sign up!</Link>
+      <Link to="/signup">Sign up</Link>
       <br />
-      <button onClick={this.props.logout}>Log Out</button>
+      <button onClick={this.props.logout}>Sign Out Of Bestflix</button>
       <br />
     </div>
     )
