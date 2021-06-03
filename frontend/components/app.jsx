@@ -4,18 +4,20 @@ import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import HomeContainer from './home/home_container'
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
-
+ProtectedRoute
 const App = () => (
   <div>
     <header>
-
-    <h1>Bestflix!</h1>
-    <HomeContainer />
+      <Link to="/" className="header-link">
+        <h1>Bestflix</h1>
+      </Link>
+      <HomeContainer />
     </header>
-    <Route path="/login" component={LoginFormContainer} />
-    <Route path="/signup" component={SignupFormContainer} />
+    <AuthRoute path="/login" component={LoginFormContainer} />
+    <AuthRoute path="/signup" component={SignupFormContainer} />
   </div>
 );
 
