@@ -11,4 +11,4 @@ const usersReducer = (state ={}, action) => {
     default:
       return state;
   }
-}
+};
