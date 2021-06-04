@@ -8,6 +8,9 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
+    this.addDemoUser = this.addDemoUser.bind(this);
+    
   }
 
   handleSubmit(e) {
@@ -53,7 +56,7 @@ class SessionForm extends React.Component {
       return (
         <div className="demo-user">
           <h3>New to Bestflix?</h3>
-          <button onClick={this.demoUser}>demo</button>
+          <button onClick={this.demoUser}>Demo</button>
         </div>
       )
     }
@@ -90,6 +93,7 @@ class SessionForm extends React.Component {
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
+        <span className="demo-login">{this.addDemoUser()}</span>
         </form>
       </div>
     );
