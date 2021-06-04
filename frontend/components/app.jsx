@@ -14,8 +14,8 @@ const App = () => (
       <div className="header-elements">
       <Link to="/" className="header-link">
         BESTFLIX
-      <HomeContainer />
       </Link>
+      <HomeContainer />
       </div>
     </header>
     <Switch>
