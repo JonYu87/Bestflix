@@ -23,7 +23,6 @@ class SessionForm extends React.Component {
   }
 
 
-
   renderErrors() {
     return(
       <ul>
@@ -39,6 +38,26 @@ class SessionForm extends React.Component {
   componentWillUnmount () {
     this.props.removeErrors();
   }
+
+  demoUser (e) {
+    e.preventDefault();
+    const demoUser = {
+      email: "Peter_Porker@bestavenger.com",
+      password: "1233456"
+    }
+    this.props.processForm(demoUser).then(() => this.props.history.push('/'))
+  }
+
+  addDemoUser () {
+    if (this.props.formType === 'Sign In') {
+      return (
+        <div className="demo-user">
+          <h3>New to Bestflix?</h3>
+          <button onClick={this.demoUser}>demo</button>
+        </div>
+      )
+    }
+  };
 
 
   render () {
@@ -71,7 +90,6 @@ class SessionForm extends React.Component {
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
-          <label>Place holder for demo user</label>
         </form>
       </div>
     );
