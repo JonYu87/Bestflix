@@ -46,20 +46,23 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
           <button className="sign-up-button">{this.props.navLink}</button>
         <form onSubmit={this.handleSubmit} className="login-form-box">
+          <h1 className="form-type">{this.props.formType}</h1>
           <br/>
           {this.renderErrors()}
           <div className="login-form">
             <br/>
-            <label>Email address:
-              <input type="text"
+            <label>
+              <input type="email"
+                placeholder="Email"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="login-input"
               />
             </label>
             <br/>
-            <label>Password:  
+            <label>
               <input type="password"
+                placeholder="Password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
@@ -68,6 +71,7 @@ class SessionForm extends React.Component {
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
+          <label>Place holder for demo user</label>
         </form>
       </div>
     );
