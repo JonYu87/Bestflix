@@ -12,7 +12,7 @@ const App = () => (
   <div>
     <header>
       <Link to="/" className="header-link">
-        <h1>Bestflix</h1>
+        BESTFLIX
       </Link>
       <HomeContainer />
     </header>
