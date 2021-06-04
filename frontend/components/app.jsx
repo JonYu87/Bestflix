@@ -13,8 +13,8 @@ const App = () => (
     <header>
       <Link to="/" className="header-link">
         BESTFLIX
-      </Link>
       <HomeContainer />
+      </Link>
     </header>
     <Switch>
     <AuthRoute path="/login" component={LoginFormContainer} />
