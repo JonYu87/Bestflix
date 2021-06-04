@@ -16,8 +16,11 @@ const App = () => (
       </Link>
       <HomeContainer />
     </header>
+    <Switch>
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
+    <Redirect to="/"/>
+    </Switch>
   </div>
 );
 
