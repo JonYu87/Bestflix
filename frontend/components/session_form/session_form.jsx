@@ -23,6 +23,7 @@ class SessionForm extends React.Component {
   }
 
 
+
   renderErrors() {
     return(
       <ul>
@@ -35,18 +36,21 @@ class SessionForm extends React.Component {
     );
   }
 
+  componentWillUnmount () {
+    this.props.removeErrors();
+  }
+
 
   render () {
     return (
       <div className="login-form-container">
+          <button className="sign-up-button">{this.props.navLink}</button>
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Sign In 
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
-            <label>Email:
+            <label>Email address:
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
@@ -54,7 +58,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <label>Password:
+            <label>Password:  
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
