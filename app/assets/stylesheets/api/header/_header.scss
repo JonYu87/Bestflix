@@ -6,6 +6,7 @@
   margin-left: 3%;
 }
 
-.header-group {
-  float: right;
+.header-elements {
+  display: flex;
+  justify-content: space-around;
 }

@@ -21,9 +21,13 @@
 };
 
 .login-form-box {
+  text-align: center;
   margin: auto;
   width: 15%;
   border: 3px solid black;
   padding: 10px;
-  text-align: center;
+}
+
+.demo-login {
+  text-align: left;
 }

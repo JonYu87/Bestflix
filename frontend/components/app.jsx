@@ -11,10 +11,12 @@ ProtectedRoute
 const App = () => (
   <div>
     <header>
+      <div className="header-elements">
       <Link to="/" className="header-link">
         BESTFLIX
       </Link>
       <HomeContainer />
+      </div>
     </header>
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
