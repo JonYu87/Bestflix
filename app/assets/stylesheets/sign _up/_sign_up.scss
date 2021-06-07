@@ -12,6 +12,14 @@
   color: white
 };
 
+.session-submit {
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+  font-weight: bold;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
 .login-form-box {
   position: relative;
   top: 100px;
@@ -23,6 +31,8 @@
   padding: 10px;
   color: white;
   border-radius: 10px;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 10px;
 }
 
 .demo-user {
@@ -32,8 +42,13 @@
 .demo-login {
   text-align: left;
   color: white;
+  font-weight: bold;
 }
 
 .demo-button {
-
+  font-weight: bold;
+  background-color: rgb(41, 41, 204);
+  color: white;
+  border-radius: 3px;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
