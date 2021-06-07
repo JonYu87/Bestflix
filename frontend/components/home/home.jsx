@@ -5,9 +5,13 @@ import { Link } from 'react-router-dom';
 const Home = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
+      <button>
       <Link to="/login">Sign in!</Link>
-      &nbsp;or&nbsp;
+      </button>
+      &nbsp; &nbsp;
+      <button>
       <Link to="/signup">Sign up!</Link>
+      </button>
     </nav>
   );
   const personalGreeting = () => (
