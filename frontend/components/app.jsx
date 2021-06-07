@@ -7,22 +7,23 @@ import HomeContainer from './home/home_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
-ProtectedRoute
 const App = () => (
-  <div>
+  <div className="body-container">
     <header>
       <div className="header-elements">
       <Link to="/" className="header-link">
-        BESTFLIX
+        <img src="https://fontmeme.com/permalink/210607/e2f4548390eddd452d1a28f7e414fda5.png"/>
       </Link>
       <HomeContainer />
       </div>
     </header>
+    <main className="main">
     <Switch>
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
     <Redirect to="/"/>
     </Switch>
+    </main>
   </div>
 );
 

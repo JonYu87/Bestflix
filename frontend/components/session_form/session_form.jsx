@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
       return (
         <div className="demo-user">
           <h3>New to Bestflix?</h3>
-          <button onClick={this.demoUser}>Demo</button>
+          <button className="demo-button" onClick={this.demoUser}>Demo</button>
         </div>
       )
     }

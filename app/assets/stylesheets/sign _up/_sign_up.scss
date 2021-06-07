@@ -9,16 +9,31 @@
 
 .login-signup {
   text-align: right;
+  color: white
 };
 
 .login-form-box {
+  position: relative;
+  top: 100px;
   text-align: center;
   margin: auto;
+  height: 300px;
   width: 15%;
-  border: 3px solid black;
+  background-color: rgba(0,0,0,.75);
   padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+.demo-user {
+  margin-top: 60px;
 }
 
 .demo-login {
   text-align: left;
+  color: white;
+}
+
+.demo-button {
+
 }
