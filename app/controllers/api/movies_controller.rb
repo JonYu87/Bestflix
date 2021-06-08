@@ -7,7 +7,7 @@ class Api::MoviesController < ApplicationController
 
   def show
 
-    @movie = Movie.find(id: params[:id])
+    @movie = Movie.find(params[:id])
 
     if @movie
       render :show
