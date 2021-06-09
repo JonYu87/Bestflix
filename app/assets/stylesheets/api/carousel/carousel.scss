@@ -1,0 +1,47 @@
+.browse-header {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.carousel-container {
+  display: flex;
+  margin-top: 50px;
+};
+
+.item {
+  position: relative;
+  display: block;
+  flex: 1 1 0px;
+  transition: transform 500ms;
+  transform: scale(1);
+};
+
+.carousel-container:focus-within .item,
+.carousel-container:hover .item {
+  transform: translateX(-25%);
+}
+
+.item:focus ~ .item,
+.item:hover ~ .item {
+  transform:translateX(25%);
+};
+
+.carousel-container .item:focus,
+.carousel-container .item:hover {
+  transform: scale(1.5);
+  z-index: 1;
+}
+
+.wrapping-div {
+  overflow: hidden;
+}
+
+.item img {
+  display: block;
+  height: 200px;
+  width: 300px;
+}
+
+
+

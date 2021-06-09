@@ -12,11 +12,41 @@ class MoviesIndexItem extends React.Component {
 
   render () {
     return (
-      <div>
-        <li>
+      <div className="wrapping-div">
+        <h1 className="browse-header">Browse</h1>
+        <div className="carousel-container">
+          <a className="item">
           <img src={this.props.movie.poster}/>
-          <video src={this.props.movie.video} controls></video>
-        </li>
+          </a>
+          <a className="item">
+          <img src={this.props.movie.poster}/>
+          </a>
+          <a className="item">
+          <img src={this.props.movie.poster}/>
+          </a>
+          <a className="item">
+          <img src={this.props.movie.poster}/>
+          </a>
+          <a className="item">
+          <img src={this.props.movie.poster}/>
+          </a>
+          <a className="item">
+          <img src={this.props.movie.poster}/>
+          </a>
+          <a className="item">
+          <img src={this.props.movie.poster}/>
+          </a>
+          <a className="item">
+          <img src={this.props.movie.poster}/>
+          </a>
+          <a className="item">
+          <img src={this.props.movie.poster}/>
+          </a>
+          <a className="item">
+          <img src={this.props.movie.poster}/>
+          </a>
+          {/* <video src={this.props.movie.video} controls></video> */}
+        </div>
       </div>
     )
   }
