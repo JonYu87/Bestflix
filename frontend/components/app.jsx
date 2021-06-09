@@ -19,8 +19,9 @@ const App = () => (
       </div>
     </header>
     <main className="main">
-    <MoviesContainer/>
+    
     <Switch>
+    <ProtectedRoute path="/browse" component={MoviesContainer}/>
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
     <Redirect to="/"/>
