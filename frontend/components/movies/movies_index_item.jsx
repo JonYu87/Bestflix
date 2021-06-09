@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+import MovieShow from './movie_show';
 
 class MoviesIndexItem extends React.Component {
   constructor(props) {
@@ -13,38 +15,10 @@ class MoviesIndexItem extends React.Component {
   render () {
     return (
       <div className="wrapping-div">
-        <h1 className="browse-header">Browse</h1>
         <div className="carousel-container">
-          <a className="item">
-          <img src={this.props.movie.poster}/>
-          </a>
-          <a className="item">
-          <img src={this.props.movie.poster}/>
-          </a>
-          <a className="item">
-          <img src={this.props.movie.poster}/>
-          </a>
-          <a className="item">
-          <img src={this.props.movie.poster}/>
-          </a>
-          <a className="item">
-          <img src={this.props.movie.poster}/>
-          </a>
-          <a className="item">
-          <img src={this.props.movie.poster}/>
-          </a>
-          <a className="item">
-          <img src={this.props.movie.poster}/>
-          </a>
-          <a className="item">
-          <img src={this.props.movie.poster}/>
-          </a>
-          <a className="item">
-          <img src={this.props.movie.poster}/>
-          </a>
-          <a className="item">
-          <img src={this.props.movie.poster}/>
-          </a>
+          <Link to={`/api/movies/${this.props.movie.id}`} className="item">
+            <img src={this.props.movie.poster}/>
+          </Link>
           {/* <video src={this.props.movie.video} controls></video> */}
         </div>
       </div>

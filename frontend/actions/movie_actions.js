@@ -20,6 +20,6 @@ export const fetchMovies = () => dispatch => {
   return MovieAPIUtil.fetchMovies().then(movies => dispatch(receiveMovies(movies)))
 };
 
-export const fetchMovie = () => dispatch => {
+export const fetchMovie = (movieId) => dispatch => {
   return MovieAPIUtil.fetchMovie(movieId).then(movie => dispatch(receiveMovie(movie)))
 };

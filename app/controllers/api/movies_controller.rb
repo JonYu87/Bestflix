@@ -17,5 +17,4 @@ class Api::MoviesController < ApplicationController
   end
   
 
- 
 end

@@ -8,7 +8,7 @@ const moviesReducer = (state ={}, action) => {
     case RECEIVE_MOVIES:
       return action.movies;
     case RECEIVE_MOVIE:
-      nextState[action.movies.id] = action.movie 
+      nextState[action.movie.id] = action.movie 
       return nextState;
     default:
       return state;

@@ -10,7 +10,7 @@
 };
 
 .item {
-  position: relative;
+  position: absolute;
   display: block;
   flex: 1 1 0px;
   transition: transform 500ms;
@@ -34,8 +34,8 @@
 }
 
 .wrapping-div {
-  position: relative;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .item img {
