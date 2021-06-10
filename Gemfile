@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem "aws-sdk-s3"
 
 
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -45,6 +46,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'annotate'
+
   
   
 end
