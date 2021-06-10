@@ -41,6 +41,32 @@ movie3 = Movie.create!(
   rating:'PG-13'
 )
 
+movie4 = Movie.create!(
+  title: 'Avengers: Infinity War',
+  description: 'The Avengers are put to the test against their greatest foe yet, Thanos',
+  duration:'160 minutes',
+  year: 2018,
+  rating:'PG-13'
+)
+
+movie5 = Movie.create!(
+  title: 'Avengers: Endgame',
+  description: 'An epic conclusion to the Infinity War Saga',
+  duration:'183 minutes',
+  year: 2019,
+  rating:'PG-13'
+)
+
+movie6 = Movie.create!(
+  title: 'Logan',
+  description: 'A weary Wolverine is reintroduced into the world after coming across a mysterious young mutant',
+  duration:'141 minutes',
+  year: 2017,
+  rating:'R'
+)
+
+
+
 #posters
 
 poster1 = open('https://app-bestflix-seeds.s3-us-west-1.amazonaws.com/movieImage1.jpg')
@@ -52,13 +78,31 @@ movie2.poster.attach(io: poster2, filename: 'dark_knight.jpg')
 poster3 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/godzilla_vs_kong.jpg')
 movie3.poster.attach(io: poster3, filename: 'godzilla_vs_kong.jpg')
 
+poster4 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/infinity_war.jpg')
+movie4.poster.attach(io: poster4, filename: 'infinity_war.jpg')
+
+poster5 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/endgame.jpg')
+movie5.poster.attach(io: poster5, filename: 'endgame.jpg')
+
+poster6 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/logan.jpg')
+movie6.poster.attach(io: poster6, filename: 'logan.jpg')
+
 #videos
 
 video1 = open('https://app-bestflix-seeds.s3-us-west-1.amazonaws.com/movieTrailer1.mp4')
 movie1.video.attach(io: video1, filename: 'movieTrailer1.mp4')
 
-video2 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/dark_knight_trailer.mp4')
-movie2.video.attach(io: video2, filename: 'dark_knight_trailer.mp4')
+video2 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/dark_knight.mp4')
+movie2.video.attach(io: video2, filename: 'dark_knight.mp4')
 
-video3 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/godzilla_trailer.mp4')
-movie3.video.attach(io: video3, filename: 'godzilla_trailer.mp4')
+video3 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/godzilla_kong.mp4')
+movie3.video.attach(io: video3, filename: 'godzilla_kong.mp4')
+
+video4 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/infinity_war.mp4')
+movie4.video.attach(io: video4, filename: 'infinity_war.mp4')
+
+video5 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/endgame.mp4')
+movie5.video.attach(io: video5, filename: 'endgame.mp4')
+
+video6 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/logan.mp4')
+movie6.video.attach(io: video6, filename: 'logan.mp4')
