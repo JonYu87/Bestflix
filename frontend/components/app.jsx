@@ -20,14 +20,13 @@ const App = () => (
       </div>
     </header>
     <main className="main">
-    
-    <Switch>
-    <ProtectedRoute path="/browse" component={MoviesContainer}/>
-    <ProtectedRoute exact path="/api/movies/:movieId" component={MovieShowContainer}/>
-    <AuthRoute path="/login" component={LoginFormContainer} />
-    <AuthRoute path="/signup" component={SignupFormContainer} />
-    <Redirect to="/"/>
-    </Switch>
+      <Switch>
+        <ProtectedRoute path="/browse" component={MoviesContainer}/>
+        <ProtectedRoute exact path="/api/movies/:movieId" component={MovieShowContainer}/>
+        <AuthRoute path="/login" component={LoginFormContainer} />
+        <AuthRoute path="/signup" component={SignupFormContainer} />
+        <Redirect to="/browse" />
+      </Switch>
     </main>
   </div>
 );
