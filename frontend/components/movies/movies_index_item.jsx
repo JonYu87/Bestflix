@@ -19,7 +19,6 @@ class MoviesIndexItem extends React.Component {
           <Link to={`/api/movies/${this.props.movie.id}`} className="item">
             <img src={this.props.movie.poster}/>
           </Link>
-          {/* <video src={this.props.movie.video} controls></video> */}
         </div>
       </div>
     )

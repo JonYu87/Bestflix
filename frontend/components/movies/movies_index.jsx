@@ -14,18 +14,18 @@ class MoviesIndex extends React.Component {
   render () {
     return (
 
-      <div>
-      <ul>
+      <div className="browse-container">
         <h1 className="browse-header">Browse</h1>
-        {
-          this.props.movies.map(movie => {
-            return (
-              <MoviesIndexItem movie={movie} key={movie.id}/>
-              )
-          })
-        }
-      </ul>
-    </div>
+            <div className="row-wrapper">
+              {
+                this.props.movies.map(movie => {
+                  return (
+                    <MoviesIndexItem movie={movie} key={movie.id}/>
+                    ) 
+                  })
+                }  
+            </div>
+      </div>
     )
   }
 };
