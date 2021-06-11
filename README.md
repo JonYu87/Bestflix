@@ -1,24 +1,26 @@
-# README
+# BestFlix README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Bestflix](https://bestflix1.herokuapp.com/#/) is a clone of [Netflix](https://www.netflix.com/). Allows users to stream their favorite movies anywhere!
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+# Technologies Used
 
-* Configuration
+* React/Redux
+* Ruby on Rails
+* PostgreSQL
+* GitHub
+* Heroku
+* AWS
 
-* Database creation
+# Features 
 
-* Database initialization
+* Bestflix allows users to sign in, create an account or try out the site with a demo login! 
 
-* How to run the test suite
+* Once logged in, user can then browse a library of movies avaliable and see details regarding the movie.
 
-* Services (job queues, cache servers, search engines, etc.)
+* Users can play the movie they want to view!
 
-* Deployment instructions
 
-* ...
+
+
