@@ -9,8 +9,15 @@
 
 .login-signup {
   text-align: right;
-  color: white
 };
+
+.sign-button {
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 
 .session-submit {
   position: relative;

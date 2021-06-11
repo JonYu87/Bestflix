@@ -4,6 +4,10 @@
   font-weight: bold;
 }
 
+.browse-container {
+  margin-top: 10%;
+}
+
 .carousel-container {
   display: flex;
   margin-top: 50px;
@@ -44,5 +48,9 @@
   width: 300px;
 }
 
+.row-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
 
 

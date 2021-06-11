@@ -1,0 +1,42 @@
+.splash-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+
+  h1{
+    font-size: 30px;
+    color: white;
+  }
+  h2{
+    font-size: 20px;
+    color: white;
+  }
+};
+
+.start-button {
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 200px;
+  height: 70px;
+};
+
+
+.splash-footer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: gray;
+}
+
+.footer-wrapper {
+  display: flex;
+}
+
+.footer-link {
+  size: 30px;
+}
