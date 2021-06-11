@@ -14,7 +14,7 @@ const App = () => (
   <div className="body-container">
     <header>
       <div className="header-elements">
-      <Link to="/browse" className="header-link">
+      <Link to="/" className="header-link">
         <img src="https://fontmeme.com/permalink/210607/e2f4548390eddd452d1a28f7e414fda5.png"/>
       </Link>
       <HomeContainer />
