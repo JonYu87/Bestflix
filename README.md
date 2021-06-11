@@ -21,6 +21,39 @@
 
 * Users can play the movie they want to view!
 
+```javascript
+
+import React from 'react';
+
+
+class MovieShow extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchMovie(this.props.match.params.movieId)
+  }
+  
+  render () {
+    if (!this.props.movie) {
+      return null;
+    } else {
+
+      return (
+        <div>
+          <div className="video-show-container">
+            <video src={this.props.movie.video} 
+            controls autoPlay
+            >
+            </video>
+          </div>
+      </div>
+    )
+  }
+}
+};
+```
+
+export default MovieShow;
+
 # Features to be improved upon/implemented in the future!
 
 * The ability for users to view movies in the specific genres they choose
