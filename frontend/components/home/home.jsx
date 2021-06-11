@@ -8,10 +8,6 @@ const Home = ({ currentUser, logout }) => {
       <Link to="/login">
       <button className="sign-button">Sign in!</button>
       </Link>
-      &nbsp; &nbsp;
-      <Link to="/signup">
-      <button className="sign-button">Sign up!</button>
-      </Link>
     </nav>
   );
   const personalGreeting = () => (

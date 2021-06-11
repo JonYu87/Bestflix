@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class SplashComponent extends React.Component {
   constructor(props) {
@@ -10,7 +11,12 @@ class SplashComponent extends React.Component {
       <div>
         <div className="splash-header">
           <h1>Unlimited movies, TV shows, and more.</h1>
+          <br />
           <h2>Watch anywhere. Cancel anytime.</h2>
+          <br />
+          <Link to='/signup'>
+            <button className="start-button">Get Started </button>
+          </Link>
 
         </div>
 
