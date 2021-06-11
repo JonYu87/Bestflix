@@ -19,7 +19,6 @@ class MoviesIndexItem extends React.Component {
   handleMouseEnter (e) {
     e.preventDefault();
     this.setState({isHovering: true})
-    console.log(this.props)
   }
 
   handleMouseOut (e) {
