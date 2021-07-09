@@ -1,0 +1,2 @@
+class VideoGenre < ApplicationRecord
+end
