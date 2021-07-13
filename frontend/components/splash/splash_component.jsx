@@ -17,7 +17,10 @@ class SplashComponent extends React.Component {
           <Link to='/signup'>
             <button className="start-button">Get Started </button>
           </Link>
+        </div>
 
+        <div className="splash-body">
+            <h1>Enjoy on your TV</h1>
         </div>
 
         <div className="splash-footer">
