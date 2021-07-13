@@ -21,6 +21,9 @@ class SplashComponent extends React.Component {
 
         <div className="splash-body">
             <h1>Enjoy on your TV</h1>
+            <br />
+            <h2>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+            </h2>
         </div>
 
         <div className="splash-footer">
