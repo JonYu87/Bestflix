@@ -9,11 +9,53 @@
     font-size: 30px;
     color: white;
   }
-  h2{
+  h3{
+    font-size: 12px;
+    color: white;
+  }
+};
+
+.splash-body {
+  position: relative;
+  display: flex;
+  height: 300px;
+  justify-content: space-around;
+  text-align: left;
+  align-items: center;
+  margin-top: 100px;
+  padding: 50px 5%;
+  background-color: black;
+  border-top: 5px solid #222;
+  border-bottom: 5px solid #222;
+
+  h1{
+    font-size: 30px;
+    color: white;
+  }
+  h3{
     font-size: 20px;
     color: white;
   }
 };
+
+.splash-text {
+  position: relative;
+  left: 5%;
+  width: 20%;
+}
+
+// .splash-inner-body {
+//   max-width: 1000px;
+//   width: 100%;
+// }
+
+.splash-tv {
+  transform: scale(.5,.5);
+
+  img {
+    z-index: 2;
+  }
+}
 
 .start-button {
   background-color: red;
