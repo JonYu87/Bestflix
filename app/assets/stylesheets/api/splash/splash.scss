@@ -9,8 +9,8 @@
     font-size: 30px;
     color: white;
   }
-  h3{
-    font-size: 12px;
+  h2{
+    font-size: 20px;
     color: white;
   }
 };
@@ -19,8 +19,7 @@
   position: relative;
   display: flex;
   height: 300px;
-  justify-content: space-around;
-  text-align: left;
+  justify-content: center;
   align-items: center;
   margin-top: 100px;
   padding: 50px 5%;
@@ -30,6 +29,8 @@
 
   h1{
     font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
     color: white;
   }
   h3{
@@ -38,16 +39,13 @@
   }
 };
 
-.splash-text {
+.splash-body-text {
   position: relative;
   left: 5%;
   width: 20%;
 }
 
-// .splash-inner-body {
-//   max-width: 1000px;
-//   width: 100%;
-// }
+
 
 .splash-tv {
   transform: scale(.5,.5);

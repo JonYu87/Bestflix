@@ -21,7 +21,7 @@ class SplashComponent extends React.Component {
 
         <div className="splash-body">
           <div className="splash-body-text">
-            <h1>Enjoy on your TV</h1>
+            <h1>Enjoy on your TV.</h1>
             <h3>
               Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
               Blu-ray players, and more.
