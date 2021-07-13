@@ -15,6 +15,46 @@
   }
 };
 
+.splash-body {
+  position: relative;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  padding: 50px 5%;
+  background-color: black;
+  border-top: 5px solid #222;
+  border-bottom: 5px solid #222;
+
+  h1{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+  }
+  h3{
+    font-size: 20px;
+    color: white;
+  }
+};
+
+.splash-body-text {
+  position: relative;
+  left: 5%;
+  width: 20%;
+}
+
+
+
+.splash-tv {
+  transform: scale(.5,.5);
+
+  img {
+    z-index: 2;
+  }
+}
+
 .start-button {
   background-color: red;
   color: white;
