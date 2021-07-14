@@ -1,19 +1,19 @@
-.splash-header{
+.splash-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 300px;
 
-  h1{
+  h1 {
     font-size: 30px;
     color: white;
   }
-  h2{
+  h2 {
     font-size: 20px;
     color: white;
   }
-};
+}
 
 .splash-body {
   position: relative;
@@ -27,17 +27,17 @@
   border-top: 5px solid #222;
   border-bottom: 5px solid #222;
 
-  h1{
+  h1 {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
   }
-  h3{
+  h3 {
     font-size: 20px;
     color: white;
   }
-};
+}
 
 .splash-body-text {
   position: relative;
@@ -45,10 +45,8 @@
   width: 20%;
 }
 
-
-
 .splash-tv {
-  transform: scale(.5,.5);
+  transform: scale(0.5, 0.5);
 
   img {
     z-index: 2;
@@ -63,19 +61,22 @@
   border-radius: 4px;
   width: 200px;
   height: 70px;
-};
+}
 
-
-.splash-footer{
+.splash-footer {
+  position: relative;
+  color: grey;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  color: gray;
+  align-items: center;
+  padding: 50px 5%;
+  background-color: black;
+  border-bottom: 5px solid #222;
 }
 
-.footer-wrapper {
-  display: flex;
-}
+// .footer-wrapper {
+//   display: flex;
+// }
 
 .footer-link {
   size: 30px;

@@ -30,7 +30,7 @@ class SplashComponent extends React.Component {
 
           <img
             className="splash-tv"
-            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+            src="https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/tv.png"
           />
         </div>
 
