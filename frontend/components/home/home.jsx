@@ -6,7 +6,7 @@ const Home = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
       <Link to="/login">
-      <button className="sign-button">Sign in!</button>
+      <button className="sign-button">Sign in</button>
       </Link>
     </nav>
   );
