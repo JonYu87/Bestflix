@@ -2,6 +2,11 @@ import React from 'react'
 import MoviesIndexItem from './movies_index_item';
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.scss";
+import "swiper/components/pagination/pagination.scss"
+import "swiper/components/navigation/navigation.scss"
+// import 'swiper/swiper-bundle.css';
+
 
 
 
@@ -26,17 +31,17 @@ class MoviesIndex extends React.Component {
       <div className="browse-container">
         <h1 className="browse-header">Browse</h1>
             <div className="row-wrapper">
-              {
-                this.props.movies.map((movie, id) => {
+                <Swiper slidesPerView={6} spaceBetween={30} slidesPerGroup={6} loop={true} pagination={{
+                  "clickable": true
+                }} navigation={true} className="mySwiper">
+                {this.props.movies.map(movie => {
                   return (
-                    <Swiper slidesPerView={3} spaceBetween={30} slidesPerGroup={3} loop={true} loopFillGroupWithBlank={true} pagination={{
-                      "clickable": true
-                    }} navigation={true} className="mySwiper" key={id}>
+                    <SwiperSlide>
                     <MoviesIndexItem movie={movie} key={movie.id}/>
-                    </Swiper>
+                    </SwiperSlide>
                     ) 
-                  })
-                }  
+                  })}
+                  </Swiper>
             </div>
       </div>
     )
