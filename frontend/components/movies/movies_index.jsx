@@ -2,7 +2,7 @@ import React from 'react'
 import MoviesIndexItem from './movies_index_item';
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.min.css";
+
 
 
 import SwiperCore, {
