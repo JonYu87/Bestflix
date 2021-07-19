@@ -7,9 +7,6 @@ import "swiper/components/pagination/pagination.scss"
 import "swiper/components/navigation/navigation.scss"
 // import 'swiper/swiper-bundle.css';
 
-
-
-
 import SwiperCore, {
   Pagination,Navigation
 } from 'swiper/core';
@@ -31,7 +28,7 @@ class MoviesIndex extends React.Component {
       <div className="browse-container">
         <h1 className="browse-header">Browse</h1>
             <div className="row-wrapper">
-                <Swiper slidesPerView={6} spaceBetween={30} slidesPerGroup={6} loop={true} pagination={{
+                <Swiper slidesPerView={5} spaceBetween={30} slidesPerGroup={1} loop={true} pagination={{
                   "clickable": true
                 }} navigation={true} className="mySwiper">
                 {this.props.movies.map(movie => {
