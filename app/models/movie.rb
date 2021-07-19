@@ -14,6 +14,14 @@
 class Movie < ApplicationRecord
   validates :title, :description, :duration, :year, :rating, presence: true
 
+  has_many: movie_genres,
+  foreign_key: :movie_id,
+  class_name: VideoGenre
+  
+  has_many: genres,
+  through: :movie_genres,
+  source: :genre
+
   has_one_attached :video
   has_one_attached :poster
 end

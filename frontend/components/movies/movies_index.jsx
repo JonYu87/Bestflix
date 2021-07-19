@@ -3,8 +3,9 @@ import MoviesIndexItem from "./movies_index_item";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
-import "swiper/components/pagination/pagination.scss";
-import "swiper/components/navigation/navigation.scss";
+// import "swiper/components/pagination/pagination.scss";
+import "swiper/components/navigation/navigation.min.css"
+// import "swiper/components/navigation/navigation.scss";
 // import 'swiper/swiper-bundle.css';
 
 import SwiperCore, { Pagination, Navigation } from "swiper/core";
