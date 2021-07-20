@@ -3,13 +3,13 @@ import MoviesIndexItem from "./movies_index_item";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
-import "swiper/components/navigation/navigation.scss";
-// import "swiper/components/pagination/pagination.scss";
-// import 'swiper/swiper-bundle.css';
+import "/home/jon/Bestflix/node_modules/swiper/components/navigation/navigation.scss"
+import "/home/jon/Bestflix/node_modules/swiper/components/pagination/pagination.scss";
+// import "./style.scss"
 
-import SwiperCore, { Pagination, Navigation } from "swiper/core";
+import SwiperCore, { Pagination, Navigation } from "swiper";
 
-SwiperCore.use([Pagination, Navigation]);
+SwiperCore.use([Navigation, Pagination]);
 
 class MoviesIndex extends React.Component {
   constructor(props) {
@@ -23,13 +23,21 @@ class MoviesIndex extends React.Component {
   render() {
     return (
       <div className="browse-container">
+        <div className="banner-movie-container">
+          {/* <video src=""></video> will have banner video here*/}
+        </div>
         <h1 className="browse-header">Browse</h1>
+        <div className="swiper-button-prev">&lt;</div>
+        <div className="swiper-button-next">&gt;</div>
         <Swiper
           slidesPerView={5}
           spaceBetween={30}
           slidesPerGroup={3}
           loop={true}
-          navigation={true}
+          navigation={{
+            nextEl: ".swiper-button-prev",
+            prevEl: ".swiper-button-next"
+          }}
           className="mySwiper"
         >
           <div className="row-wrapper">
