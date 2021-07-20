@@ -3,7 +3,7 @@ class Genre < ApplicationRecord
 
   has_many :movie_genres,
   foreign_key: genre_id,
-  class_name: VideoGenre
+  class_name: 'VideoGenre'
 
   has_many :movies,
   through: :movie_genres,
