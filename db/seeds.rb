@@ -115,7 +115,10 @@ Genre.create!(name: 'Animation')
 Genre.create!(name: 'Comedy')
 Genre.create!(name: 'Horror')
 
+
+
 VideoGenre.create!(video_id: movie1.id, genre_id: Genre.find_by(name: 'Action').id)
 VideoGenre.create!(video_id: movie1.id, genre_id: Genre.find_by(name: 'Animation').id)
+
 
 
