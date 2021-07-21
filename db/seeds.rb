@@ -111,15 +111,15 @@ logan.video.attach(io: video6, filename: 'logan.mp4')
 
 #genres
 
-Genre.create!(name: 'Action')
-Genre.create!(name: 'Animation')
-Genre.create!(name: 'Comedy')
-Genre.create!(name: 'Horror')
+action = Genre.create!(name: 'Action')
+animation = Genre.create!(name: 'Animation')
+comedy = Genre.create!(name: 'Comedy')
+horror = Genre.create!(name: 'Horror')
 
 
-
-VideoGenre.create!(video_id: demon_slayer.id, genre_id: Genre.find_by(name: 'Action').id)
-VideoGenre.create!(video_id: demon_slayer.id, genre_id: Genre.find_by(name: 'Animation').id)
+#genre joins 
+VideoGenre.create!(movie_id: demon_slayer.id, genre_id: action.id)
+VideoGenre.create!(movie_id: demon_slayer.id, genre_id: animation.id)
 
 
 

@@ -16,10 +16,10 @@ class Movie < ApplicationRecord
 
   has_many :video_genres,
   foreign_key: :movie_id,
-  class_name: 'VideoGenre'
+  class_name: :VideoGenre
   
   has_many :genres,
-  through: :movie_genres,
+  through: :video_genres,
   source: :genre
 
   has_one_attached :video
