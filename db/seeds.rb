@@ -9,6 +9,7 @@ require 'open-uri'
 
 User.delete_all
 Movie.delete_all
+Genre.delete_all
 
 u1 = User.create!(
   email: 'Peter_Porker@bestavenger.com',
@@ -106,3 +107,15 @@ movie5.video.attach(io: video5, filename: 'endgame.mp4')
 
 video6 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/logan.mp4')
 movie6.video.attach(io: video6, filename: 'logan.mp4')
+
+#genres
+
+Genre.create!(name: 'Action')
+Genre.create!(name: 'Animation')
+Genre.create!(name: 'Comedy')
+Genre.create!(name: 'Horror')
+
+VideoGenre.create!(video_id: movie1.id, genre_id: Genre.find_by(name: 'Action').id)
+VideoGenre.create!(video_id: movie1.id, genre_id: Genre.find_by(name: 'Animation').id)
+
+
