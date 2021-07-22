@@ -17,11 +17,16 @@ class MoviesIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchMovies();
-    this.props.fetchGenres();
+    this.props.fetchMovies().then(() => this.props.fetchGenres());
+    // this.props.fetchGenres();
   }
 
   render() {
+    if (!this.props.movies || !this.props.genres || this.props.genres.length < 1) {
+      return null;
+    }
+
+    console.log("genres", this.props.genres[0].movies[0].title);
     return (
       <div className="browse-container">
         <div className="banner-movie-container">
@@ -44,15 +49,19 @@ class MoviesIndex extends React.Component {
           <div className="row-wrapper">
             {this.props.movies.map((movie) => {
               return (
-                <SwiperSlide>
-                  <MoviesIndexItem movie={movie} key={movie.id} />
+                <SwiperSlide key={movie.id}>
+                  <MoviesIndexItem movie={movie} />
                 </SwiperSlide>
               );
             })}
           </div>
         </Swiper>
-        <h1 className="browse-header">{this.props.genres.genre}</h1>
-          
+        <h1 className="browse-header">{this.props.genres[0].genre}</h1>
+        <div>
+          {this.props.genres.map(genre => {
+            return (<MoviesIndexItem movie={genre.movies} />)
+          })}
+        </div>
       </div>
     );
   }
