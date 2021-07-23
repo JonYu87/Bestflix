@@ -58,9 +58,7 @@ class MoviesIndex extends React.Component {
         </Swiper>
         <h1 className="browse-header">{this.props.genres[0].genre}</h1>
         <div>
-          {this.props.genres.map(genre => {
-            return (<MoviesIndexItem movie={genre.movies} />)
-          })}
+           <img src={this.props.genres[0].movies[0].poster}/>
         </div>
       </div>
     );

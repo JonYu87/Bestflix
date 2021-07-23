@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
 import { fetchGenres } from "../../actions/genre_actions";
-import Genre from "./genre";
+import GenreRow from "./genre_row";
 
 const mSTP = (state) => {
   return {
-    genres: state.entities.genres,
+    genres: Object.values(state.entities.genres)
   };
 };
 
@@ -14,4 +14,4 @@ const mDTP = (dispatch) => {
   };
 };
 
-export default connect(mSTP, mDTP)(Genre);
+export default connect(mSTP, mDTP)(GenreRow);
