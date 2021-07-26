@@ -8,7 +8,7 @@ const mSTP = (state) => {
   };
 };
 
-const mDTP = (dispatch) => {
+const mDTP = dispatch => {
   return {
     fetchGenres: () => dispatch(fetchGenres()),
   };

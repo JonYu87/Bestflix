@@ -27,7 +27,7 @@ class MoviesIndexItem extends React.Component {
   }
 
   render () {
-    const {movie} =this.props
+    const {movie} = this.props
     return (
       <div className="wrapping-div">
         <div className="carousel-container">

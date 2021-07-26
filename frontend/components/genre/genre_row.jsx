@@ -1,6 +1,10 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/swiper-react";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.scss";
+import "/home/jon/Bestflix/node_modules/swiper/components/navigation/navigation.scss";
+import "/home/jon/Bestflix/node_modules/swiper/components/pagination/pagination.scss";
+import SwiperCore, { Pagination, Navigation } from "swiper";
+SwiperCore.use([Navigation, Pagination]);
 class GenreRow extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +19,13 @@ class GenreRow extends React.Component {
       return null;
     }
     return (
-      
-    )
+      <div>
+        {this.props.genres.map((genre, i) => {
+          return <h1>{genre.name}</h1>;
+        })}
+      </div>
+    );
   }
 }
+
+export default GenreRow;

@@ -2,6 +2,7 @@ import React from "react";
 import MoviesIndexItem from "./movies_index_item";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import GenreRow from "../genre/genre_row";
 import "swiper/swiper.scss";
 import "/home/jon/Bestflix/node_modules/swiper/components/navigation/navigation.scss";
 import "/home/jon/Bestflix/node_modules/swiper/components/pagination/pagination.scss";
@@ -17,16 +18,17 @@ class MoviesIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchMovies().then(() => this.props.fetchGenres());
+    this.props.fetchMovies();
+    // .then(() => this.props.fetchGenres());
     // this.props.fetchGenres();
   }
 
   render() {
-    if (!this.props.movies || !this.props.genres || this.props.genres.length < 1) {
-      return null;
-    }
+    // if (!this.props.movies){
+    //   return null;
+    // }
 
-    console.log("genres", this.props.genres[0].movies[0].title);
+    
     return (
       <div className="browse-container">
         <div className="banner-movie-container">
@@ -56,10 +58,8 @@ class MoviesIndex extends React.Component {
             })}
           </div>
         </Swiper>
-        <h1 className="browse-header">{this.props.genres[0].genre}</h1>
-        <div>
-           <img src={this.props.genres[0].movies[0].poster}/>
-        </div>
+       <GenreRow />
+        
       </div>
     );
   }
