@@ -25,12 +25,28 @@ class GenreRow extends React.Component {
           return (
             <div>
               <h1 className="browse-header">{genre.genre}</h1>
-              {genre.movies.map(movie => {
-                return <img src={movie.poster}></img>
-              })}
+              <Swiper
+                slidesPerView={5}
+                spaceBetween={30}
+                slidesPerGroup={3}
+                loop={true}
+                navigation={{
+                  nextEl: ".swiper-button-prev",
+                  prevEl: ".swiper-button-next",
+                }}
+                className="mySwiper"
+              >
+                {genre.movies.map((movie) => {
+                  return (
+                    <SwiperSlide key={movie.id}>
+                      <img src={movie.poster}></img>
+                    </SwiperSlide>
+                  )
+                })}
+              </Swiper>
             </div>
-            )
-          })} 
+          );
+        })}
       </div>
     );
   }
