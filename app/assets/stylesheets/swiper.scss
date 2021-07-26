@@ -60,8 +60,33 @@ body {
   z-index: 10;
   opacity: 0.7;
 }
+.genre-swiper-button-prev{
+  background: black;
+  color: white;
+  font-size: 70px;
+  padding: 70px 0;
+  width: 50px;
+  height: 200px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.7;
+}
 
 .swiper-button-next {
+  background: black;
+  color: white;
+  font-size: 70px;
+  padding: 70px 0;
+  width: 50px;
+  height: 200px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.7;
+}
+.genre-swiper-button-next {
   background: black;
   color: white;
   font-size: 70px;

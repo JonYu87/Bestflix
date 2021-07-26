@@ -1,6 +1,5 @@
 import React from "react";
 import MoviesIndexItem from "./movies_index_item";
-import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import GenreRow from "../genre/genre_row";
 import "swiper/swiper.scss";
@@ -27,7 +26,7 @@ class MoviesIndex extends React.Component {
       return null;
     }
 
-    
+    const {movies, genres, fetchGenres} = this.props;
     return (
       <div className="browse-container">
         <div className="banner-movie-container">
@@ -48,7 +47,7 @@ class MoviesIndex extends React.Component {
           className="mySwiper"
         >
           <div className="row-wrapper">
-            {this.props.movies.map((movie) => {
+            {movies.map((movie) => {
               return (
                 <SwiperSlide key={movie.id}>
                   <MoviesIndexItem movie={movie} />
@@ -58,8 +57,8 @@ class MoviesIndex extends React.Component {
           </div>
         </Swiper>
        <GenreRow 
-       fetchGenres={this.props.fetchGenres}
-       genres={this.props.genres}
+       fetchGenres={fetchGenres}
+       genres={genres}
        />
         
       </div>
