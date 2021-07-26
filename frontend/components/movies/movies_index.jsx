@@ -59,7 +59,8 @@ class MoviesIndex extends React.Component {
         </Swiper>
        <GenreRow 
        fetchGenres={this.props.fetchGenres}
-       genres={this.props.genres}/>
+       genres={this.props.genres}
+       />
         
       </div>
     );

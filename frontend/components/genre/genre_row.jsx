@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "/home/jon/Bestflix/node_modules/swiper/components/navigation/navigation.scss";
@@ -36,12 +37,14 @@ class GenreRow extends React.Component {
                 }}
                 className="mySwiper"
               >
-                {genre.movies.map((movie) => {
+                {genre.movies.map((movie, i) => {
                   return (
-                    <SwiperSlide key={movie.id}>
-                      <img src={movie.poster}></img>
+                    <SwiperSlide key={i}>
+                      <Link to={`/api/movies/${movie.id}`}>
+                      <img src={movie.poster}/>
+                      </Link>
                     </SwiperSlide>
-                  )
+                  );
                 })}
               </Swiper>
             </div>
