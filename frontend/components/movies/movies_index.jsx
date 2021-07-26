@@ -18,15 +18,14 @@ class MoviesIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchMovies();
-    // .then(() => this.props.fetchGenres());
+    this.props.fetchMovies().then(() => this.props.fetchGenres());
     // this.props.fetchGenres();
   }
 
   render() {
-    // if (!this.props.movies){
-    //   return null;
-    // }
+    if (!this.props.movies || !this.props.genres || !this.props.genres.length){
+      return null;
+    }
 
     
     return (
@@ -58,7 +57,9 @@ class MoviesIndex extends React.Component {
             })}
           </div>
         </Swiper>
-       <GenreRow />
+       <GenreRow 
+       fetchGenres={this.props.fetchGenres}
+       genres={this.props.genres}/>
         
       </div>
     );

@@ -11,17 +11,18 @@ class GenreRow extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props)
     this.props.fetchGenres();
   }
 
   render() {
-    if (!this.props.genres) {
-      return null;
-    }
+    // if (!this.props.genres) {
+    //   return null;
+    // }
     return (
       <div>
         {this.props.genres.map((genre, i) => {
-          return <h1>{genre.name}</h1>;
+          return <h1 className="browse-header">{genre.genre}</h1>;
         })}
       </div>
     );
