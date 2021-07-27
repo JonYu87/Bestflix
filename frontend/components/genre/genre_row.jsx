@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "/home/jon/Bestflix/node_modules/swiper/components/navigation/navigation.scss";
 import "/home/jon/Bestflix/node_modules/swiper/components/pagination/pagination.scss";
-import SwiperCore, {Navigation } from "swiper";
+import SwiperCore, { Navigation } from "swiper";
 SwiperCore.use([Navigation]);
 class GenreRow extends React.Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class GenreRow extends React.Component {
               <div className="genre-swiper-button-prev">&lt;</div>
               <div className="genre-swiper-button-next">&gt;</div>
               <Swiper
-                slidesPerView={5}
+                slidesPerView={2}
                 spaceBetween={30}
                 slidesPerGroup={3}
                 loop={true}
@@ -37,19 +37,18 @@ class GenreRow extends React.Component {
                   nextEl: ".genre-swiper-button-prev",
                   prevEl: ".genre-swiper-button-next",
                 }}
-                className="mySwiper"
+                className="mySwiperGenre"
               >
                 <div>
-
-                {genre.movies.map((movie, i) => {
-                  return (
-                    <SwiperSlide key={i}>
-                      <Link to={`/api/movies/${movie.id}`}>
-                        <img src={movie.poster} />
-                      </Link>
-                    </SwiperSlide>
-                  );
-                })}
+                  {genre.movies.map((movie, i) => {
+                    return (
+                      <SwiperSlide key={i}>
+                        <Link to={`/api/movies/${movie.id}`}>
+                          <img src={movie.poster} />
+                        </Link>
+                      </SwiperSlide>
+                    );
+                  })}
                 </div>
               </Swiper>
             </div>

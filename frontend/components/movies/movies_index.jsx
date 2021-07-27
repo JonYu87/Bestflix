@@ -22,11 +22,11 @@ class MoviesIndex extends React.Component {
   }
 
   render() {
-    if (!this.props.movies || !this.props.genres || !this.props.genres.length){
+    if (!this.props.movies || !this.props.genres || !this.props.genres.length) {
       return null;
     }
 
-    const {movies, genres, fetchGenres} = this.props;
+    const { movies, genres, fetchGenres } = this.props;
     return (
       <div className="browse-container">
         <div className="banner-movie-container">
@@ -56,11 +56,7 @@ class MoviesIndex extends React.Component {
             })}
           </div>
         </Swiper>
-       <GenreRow 
-       fetchGenres={fetchGenres}
-       genres={genres}
-       />
-        
+        <GenreRow fetchGenres={fetchGenres} genres={genres} />
       </div>
     );
   }
