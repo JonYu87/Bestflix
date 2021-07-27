@@ -33,15 +33,9 @@ class MoviesIndex extends React.Component {
           {/* <video src=""></video> will have banner video here*/}
         </div>
         <h1 className="browse-header">Browse</h1>
-        {/* <div className="swiper-button-prev">&lt;</div>
-        <div className="swiper-button-next">&gt;</div> */}
         <Swiper
           slidesPerView={5}
           loop={true}
-          // navigation={{
-          //   nextEl: ".swiper-button-prev",
-          //   prevEl: ".swiper-button-next",
-          // }}
           navigation={true}
           className="mySwiper"
         >
