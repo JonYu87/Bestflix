@@ -29,8 +29,7 @@ class GenreRow extends React.Component {
               <div className="genre-swiper-button-prev">&lt;</div>
               <div className="genre-swiper-button-next">&gt;</div>
               <Swiper
-                slidesPerView={2}
-                spaceBetween={30}
+                slidesPerView={5}
                 slidesPerGroup={3}
                 loop={true}
                 navigation={{

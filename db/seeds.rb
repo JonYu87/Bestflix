@@ -155,7 +155,7 @@ sonic = Movie.create!(
   rating: 'PG'
 )
 
-space_jam = Movie.create!(
+spacejam_2 = Movie.create!(
   title: 'Space Jam: A New Legacy',
   description: 'The looney toons team up with NBA superstar Lebron James in a high stakes basketball game, sound familiar?',
   duration: '120 mins',
@@ -166,15 +166,15 @@ space_jam = Movie.create!(
 spider_verse = Movie.create!(
   title: 'Spider-Man: Into the Spider-Verse',
   description: 'A young Miles Morales takes up the mantle of Spider-man to save his city and his universe',
-  duration: '120 mins'
+  duration: '120 mins',
   year: 2018,
   rating: 'PG'
 )
 
 winter_soldier = Movie.create!(
-  title: 'Captain America: The Winter Soldier'
-  description: 'Capt comes face to face with a mysterious figure who reminds him of the past'
-  duration: '136 mins'
+  title: 'Captain America: The Winter Soldier',
+  description: 'Capt comes face to face with a mysterious figure who reminds him of the past',
+  duration: '136 mins',
   year: 2014,
   rating: 'PG-13'
 )
@@ -237,8 +237,8 @@ raya.poster.attach(io: poster16, filename: 'raya.jpg')
 poster17 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/sonic.jpg')
 sonic.poster.attach(io: poster17, filename: 'sonic.jpg')
 
-poster18 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/space_jam.jpg')
-space_jam.poster.attach(io: poster18, filename: 'space_jam.jpg')
+poster18 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/spacejam_2.jpg')
+spacejam_2.poster.attach(io: poster18, filename: 'spacejam_2.jpg')
 
 poster19 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/spider_verse.jpg')
 spider_verse.poster.attach(io: poster19, filename: 'spider_verse.jpg')
@@ -303,8 +303,8 @@ raya.video.attach(io: video16, filename: 'raya.mp4')
 video17 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/sonic.mp4')
 sonic.video.attach(io: video17, filename: 'sonic.mp4')
 
-video18 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/space_jam.mp4')
-space_jam.video.attach(io: video18, filename: 'space_jam.mp4')
+video18 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/spacejam_2.mp4')
+spacejam_2.video.attach(io: video18, filename: 'spacejam_2.mp4')
 
 video19 = open('https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/spider_verse.mp4')
 spider_verse.video.attach(io: video19, filename: 'spider_verse.mp4')
@@ -338,14 +338,14 @@ VideoGenre.create!(movie_id: batman_mask.id, genre_id: animation.id)
 VideoGenre.create!(movie_id: frozen.id, genre_id: animation.id)
 VideoGenre.create!(movie_id: raya.id, genre_id: animation.id)
 VideoGenre.create!(movie_id: sonic.id, genre_id: animation.id)
-VideoGenre.create!(movie_id: space_jam.id, genre_id: animation.id)
+VideoGenre.create!(movie_id: spacejam_2.id, genre_id: animation.id)
 VideoGenre.create!(movie_id: spider_verse.id, genre_id: animation.id)
 
 #genre joins comedy
 VideoGenre.create!(movie_id: pikachu.id, genre_id: comedy.id)
 VideoGenre.create!(movie_id: player_one.id, genre_id: comedy.id)
 VideoGenre.create!(movie_id: sonic.id, genre_id: comedy.id)
-VideoGenre.create!(movie_id: space_jam.id, genre_id: comedy.id)
+VideoGenre.create!(movie_id: spacejam_2.id, genre_id: comedy.id)
 VideoGenre.create!(movie_id: pikachu.id, genre_id: comedy.id)
 VideoGenre.create!(movie_id: spider_verse.id, genre_id: comedy.id)
 VideoGenre.create!(movie_id: frozen.id, genre_id: comedy.id)
@@ -362,6 +362,6 @@ VideoGenre.create!(movie_id: frozen.id, genre_id: family.id)
 VideoGenre.create!(movie_id: pikachu.id, genre_id: family.id)
 VideoGenre.create!(movie_id: player_one.id, genre_id: family.id)
 VideoGenre.create!(movie_id: raya.id, genre_id: family.id)
-VideoGenre.create!(movie_id: space_jam.id, genre_id: family.id)
+VideoGenre.create!(movie_id: spacejam_2.id, genre_id: family.id)
 
 

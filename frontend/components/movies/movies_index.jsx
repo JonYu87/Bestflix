@@ -37,7 +37,6 @@ class MoviesIndex extends React.Component {
         <div className="swiper-button-next">&gt;</div>
         <Swiper
           slidesPerView={5}
-          spaceBetween={30}
           slidesPerGroup={3}
           loop={true}
           navigation={{
