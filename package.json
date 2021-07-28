@@ -16,7 +16,7 @@
     "redux": "^4.1.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "webpack": "^5.38.1",
+    "swiper": "^6.7.5",
     "webpack-cli": "^4.7.0"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
@@ -26,7 +26,15 @@
     "lib": "lib",
     "test": "test"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.1.0",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.3",
+    "webpack": "^5.45.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch --mode=development",
