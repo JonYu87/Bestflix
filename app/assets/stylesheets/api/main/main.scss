@@ -1,3 +1,10 @@
 .body-container {
-  background:url(https://i.imgur.com/e31uM1f.jpeg);
+  background: url(https://i.imgur.com/e31uM1f.jpeg);
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
