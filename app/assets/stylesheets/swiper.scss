@@ -1,5 +1,7 @@
 //code from swiperjs with slight modifications www.swiperjs.com
-#root { height: 100% }
+#root {
+  height: 100%;
+}
 html,
 body {
   position: relative;
@@ -18,14 +20,14 @@ body {
 .swiper-container {
   width: 100%;
   height: 100%;
-  
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: rgb(243, 240, 240);
-  opacity: 0.8;
+  background: rgba(10, 10, 10, 0);
+  z-index: 1;
+  color: white;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -42,21 +44,21 @@ body {
   align-items: center;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  align-items: center;
-}
+// .swiper-slide img {
+//   display: block;
+//   width: 200px;
+//   height: 200px;
+//   object-fit: cover;
+//   align-items: center;
+// }
 
-.swiper-button-prev{
+.swiper-button-prev {
   background: black;
   color: white;
   font-size: 70px;
-  padding: 70px 0;
+  padding: 110px 0;
   width: 50px;
-  height: 200px;
+  height: 275px;
   position: absolute;
   cursor: pointer;
   z-index: 10;
@@ -64,16 +66,16 @@ body {
 }
 
 .swiper-button-prev::before {
-  content: '<'
+  content: "<";
 }
 
 .swiper-button-next {
   background: black;
   color: white;
   font-size: 70px;
-  padding: 70px 0;
+  padding: 110px 0;
   width: 50px;
-  height: 200px;
+  height: 275px;
   position: absolute;
   right: 0;
   cursor: pointer;
@@ -82,6 +84,5 @@ body {
 }
 
 .swiper-button-next::before {
-  content: '>'
+  content: ">";
 }
-
