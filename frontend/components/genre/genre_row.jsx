@@ -38,7 +38,7 @@ class GenreRow extends React.Component {
                   {genre.movies.map((movie, i) => {
                     return (
                       <SwiperSlide key={i}>
-                        <Link to={`/api/movies/${movie.id}`}>
+                        <Link className='item' to={`/api/movies/${movie.id}`}>
                           <img src={movie.poster} />
                         </Link>
                       </SwiperSlide>
