@@ -8,9 +8,11 @@ class Search extends React.Component {
     };
     this.filterMovies = this.filterMovies.bind(this);
   }
+
   filterMovies() {
     const movs = this.props.moviesArray;
     const query = this.props.query.toLowerCase();
+
 
     let filtered = [];
     for (let i = 0; i < movs.length; i++) {
@@ -27,8 +29,9 @@ class Search extends React.Component {
   }
 
   componentDidMount() {
-    if (!this.props.moviesArray.length) {
+    if (this.props.moviesArray.length === 0) {
       this.props.fetchMovies();
+      console.log(this.props);
     }
     this.filterMovies();
   }
@@ -71,3 +74,5 @@ class Search extends React.Component {
     );
    }
 }
+
+export default Search;
