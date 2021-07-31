@@ -32,4 +32,42 @@ class Search extends React.Component {
     }
     this.filterMovies();
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.query !== this.props.query) {
+      this.filterMovies();
+    }
+    if (prevProps.moviesArray !== this.props.moviesArray) {
+      this.filterMovies();
+    }
+  }
+
+  render() {
+    return (
+      <div className="search-container">
+        <div className="search-header">
+          <h1>Search Results</h1>
+        </div>
+        <div className="search-results">
+          {this.state.searchMovies.length ? (
+            this.state.searchMovies.map((movie) => (
+              <div className="search-result" key={movie.id}>
+                <div className="search-result-img">
+                  <img src={movie.image} alt={movie.title} />
+                </div>
+                <div className="search-result-info">
+                  <h2>{movie.title}</h2>
+                  <p>{movie.description}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="search-result">
+              <h2>No results found</h2>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+   }
 }
