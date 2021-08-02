@@ -1,57 +1,51 @@
 import React from "react";
+import MovieContainer from "../movies/movies_index_container.jsx";
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchMovies: [],
+      query: "",
+      results: {},
+      loading: false,
+      message: "",
     };
-    this.filterMovies = this.filterMovies.bind(this);
+    this.cancel = "";
   }
 
-  filterMovies() {
-    const movs = this.props.moviesArray;
-    const query = this.props.query.toLowerCase();
-
-
-    let filtered = [];
-    for (let i = 0; i < movs.length; i++) {
-      if (
-        movs[i].title.toLowerCase().includes(query) ||
-        movs[i].description.toLowerCase().includes(query)
-      ) {
-        filtered.push(movs[i]);
-      }
+  handleInputChange = (e) => {
+    const query = e.target.value;
+    if (!query) {
+      this.setState({
+        query,
+        results: {},
+      });
+    } else {
+      this.setState({ query });
     }
-    this.setState({
-      searchMovies: filtered,
-    });
-  }
-
-  componentDidMount() {
-    if (this.props.moviesArray.length === 0) {
-      this.props.fetchMovies();
-      console.log(this.props);
-    }
-    this.filterMovies();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.query !== this.props.query) {
-      this.filterMovies();
-    }
-    if (prevProps.moviesArray !== this.props.moviesArray) {
-      this.filterMovies();
-    }
-  }
+  };
 
   render() {
+    const { query } = this.state;
     return (
       <div>
-
+        <div className="search-container">
+          <input
+            className="search-input"
+            type="text"
+            name="query"
+            value={query}
+            placeholder="Search"
+            onChange={this.handleInputChange}
+          />
+          <i class="fas fa-search" style={{"margin-right": "12px"}}></i>
+        </div>
+        <div className="wrapper">
+          <MovieContainer query={query} />
+        </div>
       </div>
-    )
-   }
+    );
+  }
 }
 
 export default Search;
