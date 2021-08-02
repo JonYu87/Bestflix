@@ -13,6 +13,9 @@ const Home = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <hgroup className="header-group">
       <h2 className="header-name">Welcome, {currentUser.email}!</h2>
+      <div className="search">
+        <input type="text" placeholder="Search for a movie..." />
+      </div>
       <button className="sign-button" onClick={logout}>Sign Out</button>
     </hgroup>
   );
