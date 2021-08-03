@@ -1,5 +1,6 @@
 import React from "react";
-import MovieContainer from "../movies/movies_index_container.jsx";
+import GenreRow from "../genre/genre_row"
+
 
 class Search extends React.Component {
   constructor(props) {
@@ -38,10 +39,10 @@ class Search extends React.Component {
             placeholder="Search"
             onChange={this.handleInputChange}
           />
-          <i class="fas fa-search" style={{"margin-right": "12px"}}></i>
+          <i className="fas fa-search" style={{"marginRight": "12px"}}></i>
         </div>
         <div className="wrapper">
-          <MovieContainer query={query} />
+          <GenreRow query={query} />
         </div>
       </div>
     );

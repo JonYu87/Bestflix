@@ -6,7 +6,7 @@ import LoginFormContainer from './session_form/login_form_container';
 import HomeContainer from './home/home_container'
 import MoviesContainer from './movies/movies_index_container.jsx'
 import MovieShowContainer from './movies/movie_show_container'
-import SearchContainer from './search/search_container'
+import Search from './search/search'
 import SplashContainer from './splash/splash_component.jsx'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -24,7 +24,7 @@ const App = () => (
     <main className="main">
       <Switch>
         <ProtectedRoute path="/browse" component={MoviesContainer}/>
-        <ProtectedRoute path="/search" component={SearchContainer}/>
+        {/* <ProtectedRoute path="/search" component={Search}/> */}
         <ProtectedRoute exact path="/api/movies/:movieId" component={MovieShowContainer}/>
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
