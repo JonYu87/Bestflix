@@ -20,16 +20,23 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    <div>
-      <form onSubmit={this.handleSubmit} className="search-section">
-        <input
-          type="text"
-          placeholder="Search"
-          value={this.state.search}
-          onChange={this.update("search")}
-          className="search-bar"
-        />
-      </form>
-    </div>;
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit} className="search-section">
+          <input
+            type="text"
+            placeholder="Search"
+            value={this.state.search}
+            onChange={this.update("search")}
+            className="search-bar"
+          />
+          <button type="submit" className="search-bttn">
+            <i className="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    );
   }
 }
+
+export default withRouter(SearchBar);
