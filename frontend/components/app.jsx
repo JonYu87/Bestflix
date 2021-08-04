@@ -24,7 +24,7 @@ const App = () => (
     <main className="main">
       <Switch>
         <ProtectedRoute path="/browse" component={MoviesContainer}/>
-        {/* <ProtectedRoute path="/search" component={Search}/> */}
+        <ProtectedRoute path="/search" component={Search}/>
         <ProtectedRoute exact path="/api/movies/:movieId" component={MovieShowContainer}/>
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />

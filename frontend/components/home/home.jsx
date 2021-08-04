@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 const Home = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="login-signup">

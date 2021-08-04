@@ -25,7 +25,10 @@ class Search extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchMovies();
+    if (this.props.moviesArray.length === 0) {
+      this.props.fetchMovies();
+    }
+    this.filterMovies();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -49,9 +52,11 @@ class Search extends React.Component {
       return (
         <div className="search-container">
           <h2>Search results for: {this.props.query}</h2>
-          {this.state.searchMovies.map((movie, i) => <MoviesIndexItem key={i} movie={movie} />)}
+          {this.state.searchMovies.map((movie, i) => (
+            <MoviesIndexItem key={i} movie={movie} />
+          ))}
         </div>
-      )
+      );
     }
   }
 }

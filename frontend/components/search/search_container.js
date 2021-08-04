@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import { fetchMovies } from "../../actions/movie_actions";
-import Search from "./search";
+import Search from "./search/search";
 
 const mSTP = (state, ownProps) => ({
   moviesArray: Object.values(state.entities.movies),
