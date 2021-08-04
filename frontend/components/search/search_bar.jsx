@@ -16,7 +16,7 @@ class SearchBar extends React.Component {
     e.preventDefault();
     const search = this.state.search;
     this.setState({ search: "" });
-    this.props.history.push(`/search/query=${search}`);
+    this.props.history.push(`/search/query="${search}"`);
   }
 
   render() {
@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
         <form onSubmit={this.handleSubmit} className="search-section">
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Search movie by title"
             value={this.state.search}
             onChange={this.update("search")}
             className="search-bar"
