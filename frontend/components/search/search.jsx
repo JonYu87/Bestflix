@@ -1,52 +1,58 @@
 import React from "react";
-import GenreRow from "../genre/genre_row"
-
+import MoviesIndexItem from "../movies/movies_index_item";
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: "",
-      results: {},
-      loading: false,
-      message: "",
+      searchMovies: [],
     };
-    this.cancel = "";
+    this.filterMovies = this.filterMovies.bind(this);
+  }
+  filterMovies() {
+    const movs = this.props.moviesArray;
+    const query = this.props.query.toLowerCase();
+    let filtered = [];
+    for (let i = 0; i < movs.length; i++) {
+      if (
+        movs[i].title.toLowerCase().includes(query) ||
+        movs[i].description.toLowerCase().includes(query)
+      ) {
+        filtered.push(movs[i]);
+      }
+      this.setState({ searchMovies: filtered });
+    }
   }
 
-  handleInputChange = (e) => {
-    const query = e.target.value;
-    if (!query) {
-      this.setState({
-        query,
-        results: {},
-      });
-    } else {
-      this.setState({ query });
-    }
-  };
+  componentDidMount() {
+    this.props.fetchMovies();
+  }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.query !== prevProps.query) {
+      this.filterMovies();
+    }
+    if (this.props.moviesArray !== prevProps.moviesArray) {
+      this.filterMovies();
+    }
+  }
   render() {
-    const { query } = this.state;
-    return (
-      <div>
+    if (!this.props.moviesArray) {
+      return null;
+    } else if (this.props.moviesArray.length === 0) {
+      return (
         <div className="search-container">
-          <input
-            className="search-input"
-            type="text"
-            name="query"
-            value={query}
-            placeholder="Search"
-            onChange={this.handleInputChange}
-          />
-          <i className="fas fa-search" style={{"marginRight": "12px"}}></i>
+          <h2>No movies found</h2>
         </div>
-        <div className="wrapper">
-          <GenreRow query={query} />
+      );
+    } else {
+      return (
+        <div className="search-container">
+          <h2>Search results for: {this.props.query}</h2>
+          {this.state.searchMovies.map((movie, i) => <MoviesIndexItem key={i} movie={movie} />)}
         </div>
-      </div>
-    );
+      )
+    }
   }
 }
-
 export default Search;

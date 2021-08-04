@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "/home/jon/Bestflix/node_modules/swiper/components/navigation/navigation.scss";
-import "/home/jon/Bestflix/node_modules/swiper/components/pagination/pagination.scss";
+// import "/home/jon/Bestflix/node_modules/swiper/components/pagination/pagination.scss";
 import SwiperCore, { Virtual,Keyboard,Mousewheel,Navigation,Pagination,Scrollbar,Parallax,Zoom,Lazy,Controller,A11y,History,HashNavigation,Autoplay,EffectFade,EffectCube,EffectFlip,EffectCoverflow,Thumbs} from "swiper"
 SwiperCore.use([Virtual,Keyboard,Mousewheel,Navigation,Pagination,Scrollbar,Parallax,Zoom,Lazy,Controller,A11y,History,HashNavigation,Autoplay,EffectFade,EffectCube,EffectFlip,EffectCoverflow,Thumbs])
 class GenreRow extends React.Component {
@@ -26,8 +26,6 @@ class GenreRow extends React.Component {
           return (
             <div>
               <h1 className="browse-header">{genre.genre}</h1>
-              {/* <div className="genre-swiper-button-prev">&lt;</div>
-              <div className="genre-swiper-button-next">&gt;</div> */}
               <Swiper
                 slidesPerView={5}
                 loop={true}
