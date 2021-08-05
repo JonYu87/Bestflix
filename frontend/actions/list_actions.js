@@ -24,4 +24,20 @@ const removeFromList = (movieId) => {
   };
 };
 
+export const fetchLists = () => (dispatch) => {
+  return ListAPIUtil.fetchLists().then((lists) =>
+    dispatch(receiveLists(lists))
+  );
+};
 
+export const addToList = (list) => (dispatch) => {
+  return ListAPIUtil.addToList(list).then((list) =>
+    dispatch(receiveList(list))
+  );
+};
+
+export const removeFromList = (list) => (dispatch) => {
+  return ListAPIUtil.removeFromList(list).then(() =>
+    dispatch(removeFromList(list.movie_id))
+  );
+};
