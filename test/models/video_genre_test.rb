@@ -3,10 +3,10 @@
 # Table name: video_genres
 #
 #  id         :bigint           not null, primary key
-#  genre_id   :string           not null
-#  video_id   :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  genre_id   :integer
+#  movie_id   :integer
 #
 require 'test_helper'
 
