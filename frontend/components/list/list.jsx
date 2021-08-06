@@ -8,7 +8,7 @@ class List extends React.Component {
   }
 
   componentDidMount(){
-    console.log("List mounted");
+    
   }
 
   render() {
