@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { fetchMovies } from '../../actions/movie_actions'
 import { fetchGenres } from '../../actions/genre_actions'
-import { addToList, deleteFromList, fetchLists } from '../../util/list_api_util';
+import { addToList, removeFromList, fetchLists } from '../../actions/list_actions';
 
 import MoviesIndex from './movies_index'
 
@@ -10,7 +10,8 @@ import MoviesIndex from './movies_index'
 const mSTP = (state) => {
   return {
     movies: Object.values(state.entities.movies),
-    genres: Object.values(state.entities.genres)
+    genres: Object.values(state.entities.genres),
+    id: state.session.id,
   }
 };
 
@@ -20,7 +21,7 @@ const mDTP = dispatch => {
     fetchGenres: () => dispatch(fetchGenres()),
     fetchList: (userId) => dispatch(fetchLists(userId)),
     addToList: (list) => dispatch(addToList(list)),
-    deleteFromList: (movieId) => dispatch(deleteFromList(movieId))
+    removeFromList: (movieId) => dispatch(removeFromList(movieId))
 
     
   }

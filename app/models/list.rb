@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 class List < ApplicationRecord
-  validates :movie_id, uniquness: { scope: :user_id }
+  validates :movie_id, uniqueness: { scope: :user_id }
 
   belongs_to :movie,
     class_name: 'Movie',

@@ -4,8 +4,48 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "/home/jon/Bestflix/node_modules/swiper/components/navigation/navigation.scss";
 // import "/home/jon/Bestflix/node_modules/swiper/components/pagination/pagination.scss";
-import SwiperCore, { Virtual,Keyboard,Mousewheel,Navigation,Pagination,Scrollbar,Parallax,Zoom,Lazy,Controller,A11y,History,HashNavigation,Autoplay,EffectFade,EffectCube,EffectFlip,EffectCoverflow,Thumbs} from "swiper"
-SwiperCore.use([Virtual,Keyboard,Mousewheel,Navigation,Pagination,Scrollbar,Parallax,Zoom,Lazy,Controller,A11y,History,HashNavigation,Autoplay,EffectFade,EffectCube,EffectFlip,EffectCoverflow,Thumbs])
+import SwiperCore, {
+  Virtual,
+  Keyboard,
+  Mousewheel,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  Parallax,
+  Zoom,
+  Lazy,
+  Controller,
+  A11y,
+  History,
+  HashNavigation,
+  Autoplay,
+  EffectFade,
+  EffectCube,
+  EffectFlip,
+  EffectCoverflow,
+  Thumbs,
+} from "swiper";
+SwiperCore.use([
+  Virtual,
+  Keyboard,
+  Mousewheel,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  Parallax,
+  Zoom,
+  Lazy,
+  Controller,
+  A11y,
+  History,
+  HashNavigation,
+  Autoplay,
+  EffectFade,
+  EffectCube,
+  EffectFlip,
+  EffectCoverflow,
+  Thumbs,
+]);
 class GenreRow extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +76,7 @@ class GenreRow extends React.Component {
                   {genre.movies.map((movie, i) => {
                     return (
                       <SwiperSlide key={i}>
-                        <Link className='item' to={`/api/movies/${movie.id}`}>
+                        <Link className="item" to={`/api/movies/${movie.id}`}>
                           <img src={movie.poster} />
                         </Link>
                       </SwiperSlide>
@@ -53,3 +93,5 @@ class GenreRow extends React.Component {
 }
 
 export default GenreRow;
+
+
