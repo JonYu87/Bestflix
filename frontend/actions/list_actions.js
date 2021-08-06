@@ -1,7 +1,7 @@
 import * as ListAPIUtil from "../util/list_api_util";
 export const RECEIVE_LISTS = "RECEIVE_LISTS";
 export const RECEIVE_LIST = "RECEIVE_LIST";
-export const RECEIVE_LIST_ITEMS = "RECEIVE_LIST_ITEMS";
+export const RECEIVE_FROM_LIST = "RECEIVE_LIST_ITEMS";
 
 const receiveLists = (lists) => {
   return {

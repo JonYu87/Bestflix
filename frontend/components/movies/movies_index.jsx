@@ -48,6 +48,7 @@ class MoviesIndex extends React.Component {
               );
             })}
           </div>
+            <i onClick={this.addToList} className="fas fa-plus-circle"></i>
         </Swiper>
         <GenreRow fetchGenres={fetchGenres} genres={genres} />
       </div>

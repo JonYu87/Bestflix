@@ -7,16 +7,35 @@ class List extends React.Component {
     super(props);
   }
 
-  componentDidMount(){
-    
+  componentDidMount() {
+    this.props.length || this.props.fetchLists();
+    Object.values(this.props.movies).length || this.props.fetchMovies();
   }
 
   render() {
-    return(
-      <div>
-        My List
-      </div>
-    )
+    if (!Object.values(this.props.movies).length) {
+      return null;
+    } else if (this.props.list.length === 0) {
+      return (
+        <div className="empty-list">
+          <h2>
+            Your List is empty, add a movie <Link to="/browse">here!</Link>
+          </h2>
+        </div>
+      );
+    } else {
+      return (
+        <div className="list-container">
+          <div className="list-videos">
+            {this.props.list.map((movieId, i) => {
+              return (
+                <MoviesIndexItem key={i} movie={this.props.movies[movieId]} />
+              );
+            })}
+          </div>
+        </div>
+      );
+    }
   }
 }
 

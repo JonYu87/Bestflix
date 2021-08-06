@@ -26,6 +26,8 @@ class MoviesIndexItem extends React.Component {
     this.setState({isHovering: false})
   }
 
+  
+
   render () {
     const {movie} = this.props
     return (
@@ -37,8 +39,12 @@ class MoviesIndexItem extends React.Component {
             onMouseOut={e => this.handleMouseOut(e)}
             />
           </Link>
+          <span>
+
+          </span>
         </div>
-          <MovieHover movie={movie} isHovering={this.state.isHovering}/>
+          <MovieHover movie={movie} isHovering={this.state.isHovering}
+          />
       </div>
     )
   }
