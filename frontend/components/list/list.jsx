@@ -7,6 +7,10 @@ class List extends React.Component {
     super(props);
   }
 
+  componentDidMount(){
+    console.log("List mounted");
+  }
+
   render() {
     return(
       <div>

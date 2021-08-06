@@ -25,12 +25,12 @@ const App = () => (
     <main className="main">
       <Switch>
         <ProtectedRoute path="/browse" component={MoviesContainer}/>
-        <Route path='/search/query=":query"'component={SearchResultsContainer} />
+        <ProtectedRoute path="/list" component={ListContainer} />
         <ProtectedRoute exact path="/api/movies/:movieId" component={MovieShowContainer}/>
+        <Route path='/search/query=":query"'component={SearchResultsContainer} />
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <AuthRoute path="/" component={SplashContainer} />
-        <ProtectedRoute path="/list" component={ListContainer} />
         <Redirect to="/"/>
       </Switch>
     </main>
