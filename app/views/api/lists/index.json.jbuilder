@@ -1,3 +1,7 @@
-json.array! @lists.each do |list|
-  json.extract! list, :movie_id
+arr = [];
+
+@lists.each do |list|
+    arr.push(list.movie_id);
 end
+
+json.movie_ids arr

@@ -8,6 +8,7 @@ import MoviesContainer from './movies/movies_index_container.jsx'
 import MovieShowContainer from './movies/movie_show_container'
 import SearchResultsContainer from './search/search_results_container'
 import SplashContainer from './splash/splash_component.jsx'
+import ListContainer from './list/list_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
@@ -29,6 +30,7 @@ const App = () => (
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <AuthRoute path="/" component={SplashContainer} />
+        <ProtectedRoute path="/list" component={ListContainer} />
         <Redirect to="/"/>
       </Switch>
     </main>

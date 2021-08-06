@@ -36,7 +36,7 @@ export const addToList = (list) => (dispatch) => {
   );
 };
 
-export const removeFromList = (list) => (dispatch) => {
+export const deleteFromList = (list) => (dispatch) => {
   return ListAPIUtil.removeFromList(list).then(() =>
     dispatch(removeFromList(list.movie_id))
   );
