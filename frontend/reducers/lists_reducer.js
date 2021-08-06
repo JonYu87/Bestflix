@@ -17,12 +17,11 @@ const ListReducer = (state = _nullState, action) => {
       nextState.push(action.list.movie_id);
       return nextState;
     case REMOVE_FROM_LIST:
-      nextState.splice(nextState.indexOf(action.movie_id), 1);
+      nextState.splice(nextState.indexOf(action.movieId), 1);
       return nextState;
     default:
       return state;
   }
 };
-
 
 export default ListReducer;

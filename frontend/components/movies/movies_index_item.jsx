@@ -14,14 +14,21 @@ class MoviesIndexItem extends React.Component {
     };
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.addToList = this.addToList.bind(this);
+    this.deleteListItem = this.deleteListItem.bind(this);
   }
 
-  addToList(e){
+  addToList(e) {
     this.props.addToList({
-       movie_id: this.props.movie.id,
-       user_id: this.props.id,
-    })
-}
+      movie_id: this.props.movie.id,
+      user_id: this.props.id,
+    });
+  }
+  deleteListItem(e) {
+    this.props.deleteFromList({
+      movie_id: this.props.movie.id,
+      user_id: this.props.id,
+    });
+  }
 
   handleMouseEnter(e) {
     e.preventDefault();
@@ -46,7 +53,12 @@ class MoviesIndexItem extends React.Component {
             />
           </Link>
           <div className="overlay d-flex align-items-center justify-content-center">
-            <button onClick={this.addToList} className="fas fa-plus-circle"></button>
+            <i
+              onClick={this.deleteListItem}
+              className="fas fa-minus-circle"
+            ></i>
+
+            <i onClick={this.addToList} className="fas fa-plus-circle"></i>
           </div>
         </div>
         <MovieHover movie={movie} isHovering={this.state.isHovering} />

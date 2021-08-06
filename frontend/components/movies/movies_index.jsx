@@ -83,7 +83,7 @@ class MoviesIndex extends React.Component {
             {movies.map((movie) => {
               return (
                 <SwiperSlide key={movie.id}>
-                  <MoviesIndexItem movie={movie} id={this.props.id} addToList={this.props.addToList} />
+                  <MoviesIndexItem movie={movie} id={this.props.id} addToList={this.props.addToList} deleteFromList={this.props.deleteFromList}/>
                 </SwiperSlide>
               );
             })}
