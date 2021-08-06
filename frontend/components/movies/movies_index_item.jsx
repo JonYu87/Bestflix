@@ -26,7 +26,7 @@ class MoviesIndexItem extends React.Component {
     this.setState({isHovering: false})
   }
 
-  
+
 
   render () {
     const {movie} = this.props
@@ -40,7 +40,7 @@ class MoviesIndexItem extends React.Component {
             />
           </Link>
           <span>
-
+          <i onClick={this.addToList} className="fas fa-plus-circle"></i>
           </span>
         </div>
           <MovieHover movie={movie} isHovering={this.state.isHovering}
