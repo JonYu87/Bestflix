@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import SearchBar from "../search/search_bar";
 
 const Home = ({ currentUser, logout }) => {
   const sessionLinks = () => (
@@ -13,6 +13,7 @@ const Home = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <hgroup className="header-group">
       <h2 className="header-name">Welcome, {currentUser.email}!</h2>
+      <SearchBar />
       <button className="sign-button" onClick={logout}>Sign Out</button>
     </hgroup>
   );

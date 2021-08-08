@@ -7,9 +7,49 @@ import "/home/jon/Bestflix/node_modules/swiper/components/navigation/navigation.
 import "/home/jon/Bestflix/node_modules/swiper/components/pagination/pagination.scss";
 // import "./style.scss"
 
-import SwiperCore, { Virtual,Keyboard,Mousewheel,Navigation,Pagination,Scrollbar,Parallax,Zoom,Lazy,Controller,A11y,History,HashNavigation,Autoplay,EffectFade,EffectCube,EffectFlip,EffectCoverflow,Thumbs} from "swiper"
+import SwiperCore, {
+  Virtual,
+  Keyboard,
+  Mousewheel,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  Parallax,
+  Zoom,
+  Lazy,
+  Controller,
+  A11y,
+  History,
+  HashNavigation,
+  Autoplay,
+  EffectFade,
+  EffectCube,
+  EffectFlip,
+  EffectCoverflow,
+  Thumbs,
+} from "swiper";
 
-SwiperCore.use([Virtual,Keyboard,Mousewheel,Navigation,Pagination,Scrollbar,Parallax,Zoom,Lazy,Controller,A11y,History,HashNavigation,Autoplay,EffectFade,EffectCube,EffectFlip,EffectCoverflow,Thumbs])
+SwiperCore.use([
+  Virtual,
+  Keyboard,
+  Mousewheel,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  Parallax,
+  Zoom,
+  Lazy,
+  Controller,
+  A11y,
+  History,
+  HashNavigation,
+  Autoplay,
+  EffectFade,
+  EffectCube,
+  EffectFlip,
+  EffectCoverflow,
+  Thumbs,
+]);
 
 class MoviesIndex extends React.Component {
   constructor(props) {
@@ -43,7 +83,7 @@ class MoviesIndex extends React.Component {
             {movies.map((movie) => {
               return (
                 <SwiperSlide key={movie.id}>
-                  <MoviesIndexItem movie={movie} />
+                  <MoviesIndexItem movie={movie} id={this.props.id} addToList={this.props.addToList} deleteFromList={this.props.deleteFromList}/>
                 </SwiperSlide>
               );
             })}
@@ -56,3 +96,5 @@ class MoviesIndex extends React.Component {
 }
 
 export default MoviesIndex;
+
+
