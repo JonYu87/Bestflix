@@ -68,7 +68,7 @@ class MoviesIndex extends React.Component {
 
     const { movies, genres, fetchGenres } = this.props;
     return (
-      <div className="browse-container">
+      <div className="browse-container" margin-top="2%">
         <div className="banner-wrapper">
           <div className="banner-video-wrapper">
             <video
@@ -77,7 +77,7 @@ class MoviesIndex extends React.Component {
               loop
               src="https://app-bestflix-seeds.s3.us-west-1.amazonaws.com/dark_knight.mp4"
               width="100%"
-              height="100%"
+              height="50%"
             ></video>
           </div>
           <div className="mute-button"></div>
