@@ -14,3 +14,18 @@
   color: white;
 }
 
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin-right: 1500px;
+}
+
+.nav-links a{
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  padding-top: 20px;
+  font-size: 10px;
+}
+
