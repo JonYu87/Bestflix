@@ -79,9 +79,11 @@ class MoviesIndex extends React.Component {
               width="100%"
               height="50%"
             ></video>
+            <div className="banner-details-container">
+              <h1 className="browse-header">The Dark Knight</h1>
+            </div>
           </div>
           <div className="mute-button"></div>
-          <div className="banner-details-container"></div>
         </div>
         <h1 className="browse-header">Browse</h1>
         <Swiper
