@@ -68,7 +68,7 @@ class MoviesIndex extends React.Component {
 
     const { movies, genres, fetchGenres } = this.props;
     return (
-      <div className="browse-container" margin-top="2%">
+      <div className="browse-container">
         <div className="banner-wrapper">
           <div className="banner-video-wrapper">
             <video
