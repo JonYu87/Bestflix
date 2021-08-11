@@ -55,7 +55,7 @@ body {
 .swiper-button-prev {
   background: black;
   color: white;
-  font-size: 70px;
+  font-size: 50px;
   padding: 110px 0;
   width: 50px;
   height: 275px;
@@ -63,6 +63,7 @@ body {
   cursor: pointer;
   z-index: 10;
   opacity: 0.7;
+  text-align: center;
 }
 
 .swiper-button-prev::before {
@@ -72,7 +73,7 @@ body {
 .swiper-button-next {
   background: black;
   color: white;
-  font-size: 70px;
+  font-size: 50px;
   padding: 110px 0;
   width: 50px;
   height: 275px;
@@ -81,6 +82,7 @@ body {
   cursor: pointer;
   z-index: 10;
   opacity: 0.7;
+  text-align: center;
 }
 
 .swiper-button-next::before {

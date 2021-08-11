@@ -17,6 +17,7 @@ class MovieShow extends React.Component {
           <div className="video-show-container">
             <video src={this.props.movie.video} 
             controls autoPlay
+            width="100%" height="50%"
             >
             </video>
           </div>

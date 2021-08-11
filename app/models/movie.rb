@@ -22,6 +22,10 @@ class Movie < ApplicationRecord
   through: :video_genres,
   source: :genre
 
+  has_many :lists,
+    foreign_key: :movie_id,
+    class_name: :List
+
   has_one_attached :video
   has_one_attached :poster
 end

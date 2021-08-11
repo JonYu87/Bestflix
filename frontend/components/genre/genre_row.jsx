@@ -2,10 +2,57 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
+<<<<<<< HEAD
 // import "/home/jon/Bestflix/node_modules/swiper/components/navigation/navigation.scss";
 // import "/home/jon/Bestflix/node_modules/swiper/components/pagination/pagination.scss";
 import SwiperCore, { Virtual,Keyboard,Mousewheel,Navigation,Pagination,Scrollbar,Parallax,Zoom,Lazy,Controller,A11y,History,HashNavigation,Autoplay,EffectFade,EffectCube,EffectFlip,EffectCoverflow,Thumbs} from "swiper"
 SwiperCore.use([Virtual,Keyboard,Mousewheel,Navigation,Pagination,Scrollbar,Parallax,Zoom,Lazy,Controller,A11y,History,HashNavigation,Autoplay,EffectFade,EffectCube,EffectFlip,EffectCoverflow,Thumbs])
+=======
+import "/home/jon/Bestflix/node_modules/swiper/components/navigation/navigation.scss";
+// import "/home/jon/Bestflix/node_modules/swiper/components/pagination/pagination.scss";
+import SwiperCore, {
+  Virtual,
+  Keyboard,
+  Mousewheel,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  Parallax,
+  Zoom,
+  Lazy,
+  Controller,
+  A11y,
+  History,
+  HashNavigation,
+  Autoplay,
+  EffectFade,
+  EffectCube,
+  EffectFlip,
+  EffectCoverflow,
+  Thumbs,
+} from "swiper";
+SwiperCore.use([
+  Virtual,
+  Keyboard,
+  Mousewheel,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  Parallax,
+  Zoom,
+  Lazy,
+  Controller,
+  A11y,
+  History,
+  HashNavigation,
+  Autoplay,
+  EffectFade,
+  EffectCube,
+  EffectFlip,
+  EffectCoverflow,
+  Thumbs,
+]);
+>>>>>>> b67f89b10176de8137a063e6376798d69914078b
 class GenreRow extends React.Component {
   constructor(props) {
     super(props);
@@ -26,10 +73,8 @@ class GenreRow extends React.Component {
           return (
             <div>
               <h1 className="browse-header">{genre.genre}</h1>
-              {/* <div className="genre-swiper-button-prev">&lt;</div>
-              <div className="genre-swiper-button-next">&gt;</div> */}
               <Swiper
-                slidesPerView={5}
+                slidesPerView={6}
                 loop={true}
                 navigation={true}
                 className="mySwiperGenre"
@@ -38,7 +83,7 @@ class GenreRow extends React.Component {
                   {genre.movies.map((movie, i) => {
                     return (
                       <SwiperSlide key={i}>
-                        <Link className='item' to={`/api/movies/${movie.id}`}>
+                        <Link className="item" to={`/api/movies/${movie.id}`}>
                           <img src={movie.poster} />
                         </Link>
                       </SwiperSlide>
@@ -55,3 +100,5 @@ class GenreRow extends React.Component {
 }
 
 export default GenreRow;
+
+

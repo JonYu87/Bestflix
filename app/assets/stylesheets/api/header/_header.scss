@@ -7,10 +7,27 @@
 .header-elements {
   display: flex;
   justify-content: space-around;
+  padding-top: 10px;
 }
 
 .header-name{
   font-size: 20px;
   color: white;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  padding-right: 50%;
+}
+
+.nav-links a{
+  color: white;
+  text-decoration: none;
+  // margin: 0 0 0 2rem;
+  margin-right: 15px;
+  padding-top: 20px;
+  font-size: 20px;
 }
 
