@@ -95,9 +95,9 @@ class MoviesIndex extends React.Component {
           className="mySwiper"
         >
           <div className="row-wrapper">
-            {movies.map((movie) => {
+            {movies.map((movie, i) => {
               return (
-                <SwiperSlide key={movie.id}>
+                <SwiperSlide key={i}>
                   <MoviesIndexItem
                     movie={movie}
                     id={this.props.id}

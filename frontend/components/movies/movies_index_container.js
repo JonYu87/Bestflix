@@ -11,7 +11,6 @@ const mSTP = (state, ownProps) => {
   return {
     movies: Object.values(state.entities.movies),
     genres: Object.values(state.entities.genres),
-    movie: ownProps.movie,
     id: state.session.id,
     // inList: state.entities.lists.includes(ownProps.movie.id)
   }

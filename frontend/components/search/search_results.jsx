@@ -26,7 +26,7 @@ class SearchResults extends React.Component {
     const results = this.filterMovies();
     return (
       <div>
-        {results.length < 1 ? (
+        {results.length === 0 ? (
           <div>
             <div className="results"></div>
             <h2 className="no-results">
