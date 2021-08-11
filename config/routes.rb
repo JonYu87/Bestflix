@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :movies, only: [:show, :index]
     resource :session, only: [:create, :destroy]
     resources :genres, only: [:index, :show]
-    resources :lists, only: [:index, :create, :show, :destroy]
+    resources :lists, only: [:index, :create, :show, :update, :destroy]
 
   end
 

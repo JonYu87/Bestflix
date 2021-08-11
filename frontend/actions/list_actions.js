@@ -17,6 +17,13 @@ const receiveList = (list) => {
   };
 };
 
+const updateList = (listId, movieId) => {
+  return {
+    type: UPDATE_LIST,
+    list,
+  };
+};
+
 const removeFromList = (movieId) => {
   return {
     type: REMOVE_FROM_LIST,
@@ -35,6 +42,7 @@ export const addToList = (list) => (dispatch) => {
     dispatch(receiveList(list))
   );
 };
+
 
 export const deleteFromList = (list) => (dispatch) => {
   return ListAPIUtil.removeFromList(list).then(() =>

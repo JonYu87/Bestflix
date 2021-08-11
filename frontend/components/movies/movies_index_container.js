@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { fetchMovies } from '../../actions/movie_actions'
 import { fetchGenres } from '../../actions/genre_actions'
-import { addToList, deleteFromList, fetchLists } from '../../actions/list_actions';
+import { addToList, deleteFromList, fetchLists, updateList } from '../../actions/list_actions';
 
 import MoviesIndex from './movies_index'
 
@@ -23,7 +23,8 @@ const mDTP = dispatch => {
     fetchGenres: () => dispatch(fetchGenres()),
     fetchList: (userId) => dispatch(fetchLists(userId)),
     addToList: (list) => dispatch(addToList(list)),
-    deleteFromList: (movieId) => dispatch(deleteFromList(movieId))
+    deleteFromList: (movieId) => dispatch(deleteFromList(movieId)),
+
 
     
   }

@@ -18,7 +18,7 @@ class List extends React.Component {
     } else if (this.props.list.length === 0) {
       return (
         <div className="empty-list">
-          <h2>
+          <h2 className="empty-list-result">
             Your List is empty, add a movie <Link to="/browse">here!</Link>
           </h2>
         </div>

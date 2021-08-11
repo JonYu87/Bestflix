@@ -1,5 +1,5 @@
 class Api::ListsController < ApplicationController
-  before_action :require_logged_in, only: [:index, :create, :destroy]
+  before_action :require_logged_in, only: [:index, :create, :update, :destroy]
 
   def index
     @lists = current_user.lists
