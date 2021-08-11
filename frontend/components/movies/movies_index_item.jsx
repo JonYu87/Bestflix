@@ -28,8 +28,6 @@ class MoviesIndexItem extends React.Component {
       movie_id: this.props.movie.id,
       user_id: this.props.id,
     });
-    console.log(this.props.movie.id)
-    console.log(this.props.id)
   }
 
   handleMouseEnter(e) {

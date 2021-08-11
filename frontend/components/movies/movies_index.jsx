@@ -80,14 +80,16 @@ class MoviesIndex extends React.Component {
               height="50%"
             ></video>
             <div className="banner-details-container">
-              <h1 className="browse-header">The Dark Knight</h1>
+              <h1 className="banner-title">The Dark Knight</h1>
+              <p>Watch Now</p>
+              <h5 className="banner-description">Batman confronts what would become his greatest enemy in the Joker</h5>
             </div>
           </div>
           <div className="mute-button"></div>
         </div>
         <h1 className="browse-header">Browse</h1>
         <Swiper
-          slidesPerView={5}
+          slidesPerView={6}
           loop={true}
           navigation={true}
           className="mySwiper"

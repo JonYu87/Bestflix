@@ -67,7 +67,7 @@ class GenreRow extends React.Component {
             <div>
               <h1 className="browse-header">{genre.genre}</h1>
               <Swiper
-                slidesPerView={5}
+                slidesPerView={6}
                 loop={true}
                 navigation={true}
                 className="mySwiperGenre"
