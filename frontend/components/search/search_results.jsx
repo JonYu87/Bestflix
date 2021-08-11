@@ -32,7 +32,7 @@ class SearchResults extends React.Component {
             <h2 className="no-results">
               No results found for {this.props.query}
             </h2>
-            <p>Try searching for something else</p>
+            <p className="no-results">Try searching for something else</p>
           </div>
         ) : (
           <div className="results-list">

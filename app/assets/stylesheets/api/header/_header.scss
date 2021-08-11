@@ -7,6 +7,7 @@
 .header-elements {
   display: flex;
   justify-content: space-around;
+  padding-top: 10px;
 }
 
 .header-name{
@@ -18,7 +19,7 @@
   display: flex;
   justify-content: space-around;
   position: relative;
-  margin-right: 1500px;
+  padding-right: 50%;
 }
 
 .nav-links a{
