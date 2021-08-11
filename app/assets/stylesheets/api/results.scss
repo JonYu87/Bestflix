@@ -1,0 +1,14 @@
+.results-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10%;
+  padding-left: 5%;
+}
+
+.no-results{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10%;
+  font-size: 50px;
+}
