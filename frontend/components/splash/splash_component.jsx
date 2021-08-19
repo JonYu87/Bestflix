@@ -44,6 +44,9 @@ class SplashComponent extends React.Component {
             >
               <i className="fab fa-github footer-link"></i>
             </a>
+            <a className="footer-button" href="https://www.linkedin.com/in/jonathan-yu-352b02186/" target="_blank">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
       </div>

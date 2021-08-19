@@ -82,7 +82,10 @@ class MoviesIndex extends React.Component {
             <div className="banner-details-container">
               <h1 className="banner-title">The Dark Knight</h1>
               <p>Watch Now</p>
-              <h5 className="banner-description">Batman confronts what would become his greatest enemy in the Joker</h5>
+              <h5 className="banner-description">
+                Batman confronts what would become his greatest enemy in the
+                Joker
+              </h5>
             </div>
           </div>
           <div className="mute-button"></div>
