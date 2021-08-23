@@ -40,11 +40,17 @@ class MoviesIndexItem extends React.Component {
     this.setState({ isHovering: false });
   }
 
+  handlePlay(e) {
+    e.preventDefault();
+    <Link to={`/api/movies/${movie.id}`} className="item"></Link>
+  }
+
   render() {
     const { movie } = this.props;
     return (
       <div className="wrapping-div">
         <div className="carousel-container">
+          <i onClick={this.handlePlay} className="far fa-play-circle"></i>
           <Link to={`/api/movies/${movie.id}`} className="item">
             <img
               src={movie.poster}
