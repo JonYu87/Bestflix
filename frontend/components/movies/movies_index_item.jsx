@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import MovieHover from "./movie_hover";
 import MovieShow from "./movie_show";
 
@@ -40,17 +40,16 @@ class MoviesIndexItem extends React.Component {
     this.setState({ isHovering: false });
   }
 
-  handlePlay(e) {
-    e.preventDefault();
-    <Link to={`/api/movies/${movie.id}`} className="item"></Link>
-  }
-
   render() {
     const { movie } = this.props;
     return (
       <div className="wrapping-div">
         <div className="carousel-container">
-          <i onClick={this.handlePlay} className="far fa-play-circle"></i>
+          <span>
+            <Link to={`/api/movies/${movie.id}`}>
+              <i className="far fa-play-circle"></i>
+            </Link>
+          </span>
           <Link to={`/api/movies/${movie.id}`} className="item">
             <img
               src={movie.poster}
