@@ -13,3 +13,14 @@
   padding: 0 1.5vw 0 .5vw;
   border-radius: 10px;
 }
+
+.play-button {
+  font-size: 35px;
+  color: white;
+  position: absolute;
+  top: 225px;
+  left: 0.5vw;
+  padding: 10px;
+  transition: .1s;
+  text-decoration: none;
+}

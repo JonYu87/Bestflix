@@ -45,7 +45,7 @@ class MoviesIndexItem extends React.Component {
     return (
       <div className="wrapping-div">
         <div className="carousel-container">
-          <span>
+          <span className="play-button">
             <Link to={`/api/movies/${movie.id}`}>
               <i className="far fa-play-circle"></i>
             </Link>
