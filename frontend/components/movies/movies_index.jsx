@@ -87,7 +87,7 @@ class MoviesIndex extends React.Component {
                 Batman confronts what would become his greatest enemy in the
                 Joker
               </h5>
-              <span className="play-button">
+              <span className="banner-play-button">
                 <Link to={`/api/movies/2`}>
                   <i className="far fa-play-circle"></i>
                 </Link>
