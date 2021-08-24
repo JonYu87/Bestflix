@@ -57,14 +57,14 @@ class MoviesIndexItem extends React.Component {
               onMouseOut={(e) => this.handleMouseOut(e)}
             />
           </Link>
-          <div className="overlay d-flex align-items-center justify-content-center">
+          <span className="add-delete">
             <i
               onClick={this.deleteListItem}
               className="fas fa-minus-circle"
             ></i>
 
             <i onClick={this.addToList} className="fas fa-plus-circle"></i>
-          </div>
+          </span>
         </div>
         <MovieHover movie={movie} isHovering={this.state.isHovering} />
       </div>
