@@ -1,5 +1,6 @@
 import React from "react";
 import MoviesIndexItem from "./movies_index_item";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import GenreRow from "../genre/genre_row";
 import "swiper/swiper.scss";
@@ -86,6 +87,11 @@ class MoviesIndex extends React.Component {
                 Batman confronts what would become his greatest enemy in the
                 Joker
               </h5>
+              <span className="play-button">
+                <Link to={`/api/movies/2`}>
+                  <i className="far fa-play-circle"></i>
+                </Link>
+              </span>
             </div>
           </div>
           <div className="mute-button"></div>
