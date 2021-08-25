@@ -88,7 +88,7 @@ class MoviesIndex extends React.Component {
                 Joker
               </h5>
               <span className="banner-play-button">
-                <Link to={`/api/movies/2`}>
+                <Link to={`/api/movies/10`}>
                   <i className="far fa-play-circle"></i>
                 </Link>
               </span>
