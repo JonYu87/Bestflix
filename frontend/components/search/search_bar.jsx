@@ -1,15 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import { withRouter } from "react-router";
 
-class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      search: "",
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+const SearchBar = (props) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  
   update(field) {
+
     return (e) => this.setState({ [field]: e.target.value });
   }
   handleSubmit(e) {
