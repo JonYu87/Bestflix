@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import MoviesIndexItem from "../movies/movies_index_item";
 
@@ -13,7 +13,7 @@ class List extends React.Component {
     Object.values(this.props.movies).length || this.props.fetchMovies();
   }
 
-  filterMovies(movieId){
+  filterMovies(movieId) {
     for (let i = 0; i < this.props.movies.length; i++) {
       if (this.props.movies[i].id === parseInt(movieId)) {
         return this.props.movies[i];
@@ -38,9 +38,7 @@ class List extends React.Component {
           <div className="list-videos">
             {this.props.list.map((movieId, i) => {
               let movie = this.filterMovies(movieId);
-              return (
-                <MoviesIndexItem key={i} movie={movie} />
-              );
+              return <MoviesIndexItem key={i} movie={movie} />;
             })}
           </div>
         </div>
