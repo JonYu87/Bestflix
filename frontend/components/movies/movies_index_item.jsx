@@ -50,13 +50,15 @@ class MoviesIndexItem extends React.Component {
               <i className="far fa-play-circle"></i>
             </Link>
           </span>
-          <Link to={`/api/movies/${movie.id}`} className="item">
-            <img
-              src={movie.poster}
-              onMouseEnter={(e) => this.handleMouseEnter(e)}
-              onMouseOut={(e) => this.handleMouseOut(e)}
-            />
-          </Link>
+          <div className="movies-item-container">
+            <Link to={`/api/movies/${movie.id}`} className="item">
+              <img
+                src={movie.poster}
+                onMouseEnter={(e) => this.handleMouseEnter(e)}
+                onMouseOut={(e) => this.handleMouseOut(e)}
+              />
+            </Link>
+          </div>
           <span className="add-delete">
             <i
               onClick={this.deleteListItem}

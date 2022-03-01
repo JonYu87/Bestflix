@@ -5,6 +5,14 @@
   padding-bottom: 10px;
 }
 
+.movies-item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
 .item img {
   width: 21vw;
   height: 275px;
