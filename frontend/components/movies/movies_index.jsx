@@ -58,7 +58,7 @@ const MoviesIndex = (props) => {
     props.fetchMovies().then(() => props.fetchGenres());
     // console.log("render");
     // this.props.fetchGenres();
-  });
+  }, []);
 
   // const render = () => {
   //   if (!props.movies || !props.genres || !props.genres.length) {
